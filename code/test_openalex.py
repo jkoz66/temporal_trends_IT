@@ -39,7 +39,7 @@ MAILTO = os.environ.get("OPENALEX_MAILTO", "your_email@example.com")  # TODO: se
 BASE_URL = "https://api.openalex.org/works"
 
 # Project scope (you can tweak these at runtime)
-YEAR_START = 2010
+YEAR_START = 2015
 YEAR_END   = 2025
 
 # Your picked buzzwords
