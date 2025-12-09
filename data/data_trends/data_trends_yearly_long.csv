@@ -1,14 +1,15 @@
 buzzword,year,interest
-big data,2015,10.17
-big data,2016,10.33
-big data,2017,10.92
-big data,2018,10.33
-big data,2019,9.75
-big data,2020,8.75
-big data,2021,7.92
-big data,2022,9.5
-big data,2023,8.5
+big data,2015,10.0
+big data,2016,10.17
+big data,2017,10.83
+big data,2018,10.08
+big data,2019,9.92
+big data,2020,8.42
+big data,2021,7.83
+big data,2022,9.33
+big data,2023,8.33
 big data,2024,7.42
+big data,2025,9.92
 quantum computing,2015,0.42
 quantum computing,2016,0.25
 quantum computing,2017,0.92
@@ -16,9 +17,10 @@ quantum computing,2018,1.0
 quantum computing,2019,1.08
 quantum computing,2020,1.0
 quantum computing,2021,1.0
-quantum computing,2022,1.08
+quantum computing,2022,1.17
 quantum computing,2023,1.92
 quantum computing,2024,2.5
+quantum computing,2025,8.0
 artificial general intelligence,2015,0.0
 artificial general intelligence,2016,0.0
 artificial general intelligence,2017,0.0
@@ -29,46 +31,51 @@ artificial general intelligence,2021,0.0
 artificial general intelligence,2022,0.0
 artificial general intelligence,2023,0.0
 artificial general intelligence,2024,0.0
-blockchain,2015,1.83
-blockchain,2016,5.58
-blockchain,2017,18.83
-blockchain,2018,25.5
-blockchain,2019,16.08
-blockchain,2020,13.33
-blockchain,2021,22.92
-blockchain,2022,21.17
-blockchain,2023,14.25
-blockchain,2024,16.25
+artificial general intelligence,2025,0.33
+blockchain,2015,1.75
+blockchain,2016,5.42
+blockchain,2017,18.75
+blockchain,2018,25.0
+blockchain,2019,15.83
+blockchain,2020,13.17
+blockchain,2021,22.75
+blockchain,2022,20.92
+blockchain,2023,14.17
+blockchain,2024,16.08
+blockchain,2025,18.67
 cryptocurrency,2015,0.0
-cryptocurrency,2016,0.92
-cryptocurrency,2017,18.75
-cryptocurrency,2018,25.75
-cryptocurrency,2019,8.83
-cryptocurrency,2020,10.17
-cryptocurrency,2021,43.33
-cryptocurrency,2022,21.0
-cryptocurrency,2023,9.67
-cryptocurrency,2024,9.83
+cryptocurrency,2016,0.83
+cryptocurrency,2017,18.25
+cryptocurrency,2018,25.58
+cryptocurrency,2019,8.58
+cryptocurrency,2020,9.92
+cryptocurrency,2021,43.17
+cryptocurrency,2022,20.67
+cryptocurrency,2023,9.58
+cryptocurrency,2024,9.67
+cryptocurrency,2025,19.33
 metaverse,2015,0.0
 metaverse,2016,0.0
 metaverse,2017,0.08
 metaverse,2018,0.04
 metaverse,2019,0.0
 metaverse,2020,0.0
-metaverse,2021,8.27
-metaverse,2022,18.11
-metaverse,2023,5.07
-metaverse,2024,2.62
+metaverse,2021,8.32
+metaverse,2022,17.76
+metaverse,2023,4.97
+metaverse,2024,2.57
+metaverse,2025,2.32
 edge computing,2015,0.0
 edge computing,2016,0.0
 edge computing,2017,0.04
-edge computing,2018,0.51
-edge computing,2019,0.51
-edge computing,2020,0.51
-edge computing,2021,0.59
-edge computing,2022,0.8
-edge computing,2023,0.59
-edge computing,2024,0.51
+edge computing,2018,0.5
+edge computing,2019,0.5
+edge computing,2020,0.5
+edge computing,2021,0.62
+edge computing,2022,0.75
+edge computing,2023,0.54
+edge computing,2024,0.5
+edge computing,2025,1.24
 generative ai,2015,0.0
 generative ai,2016,0.0
 generative ai,2017,0.0
@@ -77,25 +84,28 @@ generative ai,2019,0.0
 generative ai,2020,0.0
 generative ai,2021,0.0
 generative ai,2022,0.08
-generative ai,2023,4.77
-generative ai,2024,7.3
-chatbot,2015,0.51
-chatbot,2016,1.06
-chatbot,2017,2.57
-chatbot,2018,3.21
-chatbot,2019,3.5
-chatbot,2020,3.93
-chatbot,2021,3.55
-chatbot,2022,4.77
-chatbot,2023,13.46
-chatbot,2024,11.44
-augmented reality,2015,1.86
-augmented reality,2016,2.41
-augmented reality,2017,3.21
-augmented reality,2018,2.95
-augmented reality,2019,2.7
-augmented reality,2020,2.45
-augmented reality,2021,2.11
-augmented reality,2022,2.49
+generative ai,2023,4.68
+generative ai,2024,7.24
+generative ai,2025,14.94
+chatbot,2015,0.5
+chatbot,2016,1.03
+chatbot,2017,2.53
+chatbot,2018,3.19
+chatbot,2019,3.48
+chatbot,2020,3.89
+chatbot,2021,3.56
+chatbot,2022,4.8
+chatbot,2023,13.12
+chatbot,2024,11.43
+chatbot,2025,17.51
+augmented reality,2015,1.78
+augmented reality,2016,2.4
+augmented reality,2017,3.15
+augmented reality,2018,2.94
+augmented reality,2019,2.69
+augmented reality,2020,2.48
+augmented reality,2021,2.07
+augmented reality,2022,2.44
 augmented reality,2023,2.11
 augmented reality,2024,2.03
+augmented reality,2025,2.4
