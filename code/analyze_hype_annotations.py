@@ -22,14 +22,14 @@ import pandas as pd
 # Paths (adjust LABELSTUDIO_EXPORT to your actual file name if needed)
 # ---------------------------------------------------------------------
 
-OUTDIR = Path("data_openalex")
+OUTDIR = Path("data/data_openalex")
 ANNOTATION_DIR = OUTDIR / "annotation"
 PROCESSED_DIR = OUTDIR / "processed"
 
 # TODO: change this to match your Label Studio export filename if different
 LABELSTUDIO_EXPORT = (
     ANNOTATION_DIR
-    / "project-2-at-2025-12-05-13-15-7b69df03 - project-2-at-2025-12-05-13-15-7b69df03.csv.csv"
+    / "Annotation_results.csv"
 )
 
 # ---------------------------------------------------------------------
