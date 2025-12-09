@@ -1,0 +1,101 @@
+id,text,Piotr,Ondrej,Jakub,Hanka
+1,Big Data and Predictive Analysis is Key to Superior Supply Chain Performance,2,2,2,4
+2,"Generative artificial intelligence of things systems, multisensory immersive extended reality technologies, and algorithmic big data simulation and modelling tools in digital twin industrial metaverse",1,3,2,2
+3,Big-data applications in the government sector,2,1,1,1
+4,Research on Development Strategy for Smart Grid Big Data,3,2,2,2
+5,"Big Data: Issues, Challenges, and Techniques in Business Intelligence",2,1,2,2
+6,Current approaches for executing big data science projects—a systematic literature review,2,1,2,2
+7,Survey on Big Data Analytics in Public Sector of Russian Federation,1,1,3,3
+8,Carbon price forecasting models based on big data analytics,1,2,2,4
+9,Comparative Study of Big Data Frameworks,1,1,2,2
+10,Putting the data before the algorithm in big data addressing personalized healthcare,3,3,3,4
+11,"Symbiosis of Semiconductors, AI and Quantum Computing",4,4,3,5
+12,Quantum Optical Convolutional Neural Network: A Novel Image Recognition Framework for Quantum Computing,3,3,4,4
+13,"Application-Motivated, Holistic Benchmarking of a Full Quantum Computing Stack: Experimental Data",4,5,4,3
+14,EntangleVR: A Visual Programming Interface for Virtual Reality Interactive Scene Generation,4,4,2,4
+15,Deep-Cryogenic Voltage References in 40-nm CMOS,1,1,3,1
+16,Time independent universal computing with spin chains: quantum plinko machine,3,3,3,2
+17,A Blockchain Consensus Protocol Based on Quantum Attack Algorithm,3,3,4,4
+18,Machine Learning and Optimization in Energy Management Systems for Plug-In Hybrid Electric Vehicles: A Comprehensive Review,4,1,4,4
+19,Machine Learning Approach for Parkinson's disease Prediction through Quantum Computing Techniques,5,3,4,5
+20,Impact of qubit connectivity on quantum algorithm performance,2,2,3,1
+21,A Novel Artificial Bee Colony Optimizer with Dynamic Population Size for Multi-level Threshold Image Segmentation,4,3,4,4
+22,Fearing the Robot Apocalypse: Correlates of AI Anxiety,5,5,5,5
+23,Long-term cost-effectiveness of interventions for loss of electricity/industry compared to artificial general intelligence safety,2,1,3,4
+24,Synthetic Data and Its Utility in Pathology and Laboratory Medicine,2,1,2,3
+25,Artificial General Intelligence,1,1,1,2
+26,"Unknown Future, Repeated Present: A Narrative-Centered Analysis of Long-Term AI Discourse",4,3,4,5
+27,How to Create Business Value Through Technological Innovations Using ICCT Underlying Technologies,2,1,2,4
+28,From Large Language Models to Large Multimodal Models: A Literature Review,2,2,2,2
+29,Integrating artificial intelligence with smartphone-based imaging for cancer detection in vivo,4,2,3,5
+30,Consciousness: A Paradigm Towards Artificial General Intelligence,4,3,3,2
+31,An Investigation into Smart Contract Deployment on Ethereum Platform Using Web3.js and Solidity Using Blockchain,3,2,3,1
+32,Blockchain-Based Trustworthy Edge Caching Scheme for Mobile Cyber-Physical System,2,4,4,2
+33,Blockchain – From Public to Private,2,2,2,2
+34,Practical Lattice-Based Multisignature Schemes for Blockchains,1,3,2,1
+35,Dynamic AES Encryption and Blockchain Key Management: A Novel Solution for Cloud Data Security,2,2,3,2
+36,BFT-Store: Storage Partition for Permissioned Blockchain via Erasure Coding,1,2,3,1
+37,"A literature review of blockchain technology applications in supply chains: A comprehensive analysis of themes, methodologies and industries",1,1,2,4
+38,The Blockchain for Domain Based Static Sharding,1,3,2,1
+39,Blockchain adoption and channel selection strategies in a competitive remanufacturing supply chain,3,1,2,3
+40,A Privacy-Preserving Trust Model Based on Blockchain for VANETs,1,2,2,1
+41,"Are Cryptocurrencies the New ""Financial Weapons of Mass Destruction""?",5,5,4,5
+42,"Blockchain - Comparative Study on Bitcoin, Ripple and Libra Cryptocurrencies",1,2,2,4
+43,"Crypto Currency and its Susceptibility to Speculative Bubbles, Manipulation, Scams and Fraud",4,3,3,5
+44,Digital Cryptoeconomics Powered by Digital Cryptocurrency,3,3,2,2
+45,Cryptocurrency – The Next Big Thing,4,3,2,4
+46,Individual Risk Perception and Choice using Cryptocurrency for Transactions,2,3,2,5
+47,THE LEGALITY OF CRYPTOCURRENCY TRADE IN ACCORDANCE WITH THE PRINCIPLES OF ISLAMIC BANKING LAW,3,2,4,4
+48,Regulating Cryptocurrencies: New Challenges to Economic Security and Problems Created by Individuals Involved in the Schemes of Laundering Cryptocurrencies-Generated Profits,2,2,4,3
+49,Deep Learning with Attention Mechanism for Cryptocurrency Price Forecasting,2,3,3,2
+50,Electronic Healthcare Data Record Security Using Blockchain and Smart Contract,2,1,2,2
+51,Retracted: Exploring the Impact of Avatar Customization in Metaverse: The Role of the Class Mode on Task Engagement and Expectancy-Value Beliefs for Fashion Education,3,1,4,4
+52,The Role of Network Slicing and Edge Computing in the Metaverse Realization,2,3,2,2
+53,"Social opportunities, learning practices, and performance in metaverse and virtual world: A comparative scoping review in higher education",3,1,3,3
+54,"The Metaverse: Survey, Trends, Novel Pipeline Ecosystem &amp; Future Directions",1,2,3,1
+55,Fashion and the metaverse: from omni-channel to direct-to-avatar,3,2,2,1
+56,Enhancing Software Engineering Education in Africa through a Metaversity,3,4,3,2
+57,The Effect of Metaverse Telepresence on Usage Satisfaction with Use: Verification of the Dual Mediation Effect of Immersion and Pleasure,3,4,3,1
+58,Metaverse and Stock Market—A Study Based on Fama-French Model,3,2,2,1
+59,The intention to adopt metaverse in Islamic banks: an integrated theoretical framework of TAM and religiosity intention model,3,1,3,1
+60,CLOTH4D: A Dataset for Clothed Human Reconstruction,1,1,2,2
+61,Air–Ground Surveillance Sensor Network based on edge computing for target tracking,2,2,3,1
+62,Introduction to doors Workshops on Edge Computing (2021-2023),1,1,2,1
+63,A Cloud-Guided Feature Extraction Approach for Image Retrieval in Mobile Edge Computing,1,2,2,1
+64,A Comprehensive Study of Edge Computing and the Impact of Distributed Computing on Industrial Automation,1,1,2,2
+65,Design and Research of Intelligent Educational Administration Management System Based on Mobile Edge Computing Internet,3,1,2,2
+66,Performance Analysis of an Edge Computing SaaS System for Mobile Users,1,1,2,1
+67,Discussion on Key Technologies of Cloud Game Based on 5G and Edge Computing,3,3,2,4
+68,HealthEdge: Task scheduling for edge computing with health emergency and human behavior consideration in smart homes,4,3,2,4
+69,Classifier based Gateway for Edge Computing,1,2,1,1
+70,Vehicular Computation Offloading for Industrial Mobile Edge Computing,1,3,2,2
+71,Regulating Generative AI: Ethical Considerations and Explainability Benchmarks,2,2,2,4
+72,A Scoping Review of the Use of Generative AI in Assessment in Higher Education,1,1,2,4
+73,"Current Landscape of Generative AI: Models, Applications, Regulations and Challenges",1,2,2,3
+74,Generative AI-driven design optimization: eight key application scenarios,2,3,2,4
+75,The Impact of Generative AI (ChatGPT) on the HR Functions Related Hiring Process,2,2,2,5
+76,A Generative AI-Based Virtual Physician Assistant,4,1,2,5
+77,"To ChatGPT, or not to ChatGPT: Navigating the paradoxes of generative AI in the advertising industry",5,3,4,4
+78,Accelerated Discovery of Carbamate Cbl-b Inhibitors Using Generative AI Models and Structure-Based Drug Design,1,2,3,1
+79,Treading water: new data on the impact of AI ethics information sessions in classics and ancient language pedagogy,3,4,4,3
+80,Skilled for the Future: Information Literacy for AI Use by University Students in Africa and the Role of Librarians,3,3,4,4
+81,Crowdsourcing for Reminiscence Chatbot Design,1,2,2,2
+82,Chatbot Testing Using AI Planning,3,1,1,2
+83,Can Generative AI Chatbots Emulate Human Connection? A Relationship Science Perspective,4,3,3,5
+84,Exploring the Potential of Chatbots in Critical Care Nephrology,2,2,2,4
+85,The Effect of Chatbot Services on Online Shop Customer Satisfaction,2,1,2,3
+86,"Appli, chatbot et santé mentale : est-ce vraiment sérieux ?",4,3,5,1
+87,Internet Wizard for Enhancing Open Domain Question Answering Chatbot Knowledge-Base in Information Seeking,4,3,2,2
+88,An Effective Query Response using Chatbot,1,1,4,3
+89,“How mAy I help you today?” The use of AI chatbots in small family businesses and the moderating role of customer affective commitment,3,2,2,4
+90,Enabling Expert Critique at Scale with Chatbots and Micro Guidance,2,4,2,1
+91,"Why, when and how to use augmented reality agents (AuRAs)",2,3,3,1
+92,"Augmented reality with image registration, vision correction and sunlight readability via liquid crystal devices",1,3,3,4
+93,Adjacent surface trajectory planning of robot-assisted tooth preparation based on augmented reality,1,3,1,5
+94,Social interaction in augmented reality,3,1,3,5
+95,Digital Protection Method of Intangible Cultural Heritage Based on Augmented Reality Technology,2,2,3,2
+96,Evaluation of learners’ attitude toward learning in ARIES augmented reality environments,2,2,3,1
+97,Exploring Cultural Heritage Using Augmented Reality Through Google’s Project Tango and ARCore,2,3,3,1
+98,Augmented Reality on a C-Arm System: A Preclinical Assessment for Percutaneous Needle Localization,1,3,2,1
+99,Manual PCB assembly using Augmented Reality towards Total Quality,1,2,2,1
+100,An objective comparison of methods for augmented reality in laparoscopic liver resection by preoperative-to-intraoperative image fusion from the MICCAI2022 challenge,1,2,2,1
