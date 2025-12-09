@@ -117,6 +117,7 @@ def krippendorff_alpha(data: np.ndarray, level_of_measurement: str = "ordinal") 
 def load_and_clean_annotations(path: Path) -> pd.DataFrame:
     """Load Label Studio CSV export, compute hype stats & Krippendorff's alpha."""
     df = pd.read_csv(path)
+    print("[DEBUG] Columns in Label Studio export:", list(df.columns))
 
     # Rename id to avoid confusion with OpenAlex id later
     if "id" in df.columns:

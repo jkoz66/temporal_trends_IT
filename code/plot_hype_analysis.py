@@ -26,7 +26,7 @@ import seaborn as sns
 # Paths
 # ---------------------------------------------------------------------
 
-OUTDIR = Path("data_openalex")
+OUTDIR = Path("data/data_openalex")
 ANNOTATION_DIR = OUTDIR / "annotation"
 FIG_DIR = Path("figures")
 FIG_DIR.mkdir(exist_ok=True)
