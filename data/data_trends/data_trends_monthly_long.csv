@@ -1,0 +1,1201 @@
+buzzword,year,month,interest
+big data,2015,1,10.0
+big data,2015,2,11.0
+big data,2015,3,11.0
+big data,2015,4,11.0
+big data,2015,5,10.0
+big data,2015,6,10.0
+big data,2015,7,9.0
+big data,2015,8,9.0
+big data,2015,9,11.0
+big data,2015,10,11.0
+big data,2015,11,10.0
+big data,2015,12,9.0
+big data,2016,1,9.0
+big data,2016,2,11.0
+big data,2016,3,10.0
+big data,2016,4,11.0
+big data,2016,5,10.0
+big data,2016,6,11.0
+big data,2016,7,9.0
+big data,2016,8,9.0
+big data,2016,9,11.0
+big data,2016,10,11.0
+big data,2016,11,12.0
+big data,2016,12,10.0
+big data,2017,1,11.0
+big data,2017,2,12.0
+big data,2017,3,12.0
+big data,2017,4,11.0
+big data,2017,5,11.0
+big data,2017,6,10.0
+big data,2017,7,10.0
+big data,2017,8,10.0
+big data,2017,9,11.0
+big data,2017,10,12.0
+big data,2017,11,12.0
+big data,2017,12,9.0
+big data,2018,1,10.0
+big data,2018,2,11.0
+big data,2018,3,12.0
+big data,2018,4,10.0
+big data,2018,5,10.0
+big data,2018,6,9.0
+big data,2018,7,9.0
+big data,2018,8,10.0
+big data,2018,9,11.0
+big data,2018,10,12.0
+big data,2018,11,11.0
+big data,2018,12,9.0
+big data,2019,1,9.0
+big data,2019,2,10.0
+big data,2019,3,10.0
+big data,2019,4,10.0
+big data,2019,5,10.0
+big data,2019,6,9.0
+big data,2019,7,9.0
+big data,2019,8,9.0
+big data,2019,9,10.0
+big data,2019,10,10.0
+big data,2019,11,12.0
+big data,2019,12,9.0
+big data,2020,1,10.0
+big data,2020,2,10.0
+big data,2020,3,9.0
+big data,2020,4,9.0
+big data,2020,5,8.0
+big data,2020,6,9.0
+big data,2020,7,8.0
+big data,2020,8,8.0
+big data,2020,9,10.0
+big data,2020,10,9.0
+big data,2020,11,8.0
+big data,2020,12,7.0
+big data,2021,1,7.0
+big data,2021,2,8.0
+big data,2021,3,8.0
+big data,2021,4,8.0
+big data,2021,5,8.0
+big data,2021,6,8.0
+big data,2021,7,7.0
+big data,2021,8,7.0
+big data,2021,9,8.0
+big data,2021,10,9.0
+big data,2021,11,9.0
+big data,2021,12,8.0
+big data,2022,1,9.0
+big data,2022,2,11.0
+big data,2022,3,11.0
+big data,2022,4,11.0
+big data,2022,5,10.0
+big data,2022,6,9.0
+big data,2022,7,8.0
+big data,2022,8,8.0
+big data,2022,9,10.0
+big data,2022,10,10.0
+big data,2022,11,9.0
+big data,2022,12,8.0
+big data,2023,1,9.0
+big data,2023,2,9.0
+big data,2023,3,8.0
+big data,2023,4,8.0
+big data,2023,5,9.0
+big data,2023,6,9.0
+big data,2023,7,9.0
+big data,2023,8,8.0
+big data,2023,9,9.0
+big data,2023,10,9.0
+big data,2023,11,8.0
+big data,2023,12,7.0
+big data,2024,1,8.0
+big data,2024,2,8.0
+big data,2024,3,8.0
+big data,2024,4,8.0
+big data,2024,5,8.0
+big data,2024,6,7.0
+big data,2024,7,6.0
+big data,2024,8,7.0
+big data,2024,9,8.0
+big data,2024,10,8.0
+big data,2024,11,7.0
+big data,2024,12,6.0
+quantum computing,2015,1,0.0
+quantum computing,2015,2,0.0
+quantum computing,2015,3,0.0
+quantum computing,2015,4,0.0
+quantum computing,2015,5,1.0
+quantum computing,2015,6,0.0
+quantum computing,2015,7,0.0
+quantum computing,2015,8,0.0
+quantum computing,2015,9,1.0
+quantum computing,2015,10,1.0
+quantum computing,2015,11,1.0
+quantum computing,2015,12,1.0
+quantum computing,2016,1,0.0
+quantum computing,2016,2,0.0
+quantum computing,2016,3,0.0
+quantum computing,2016,4,1.0
+quantum computing,2016,5,1.0
+quantum computing,2016,6,0.0
+quantum computing,2016,7,0.0
+quantum computing,2016,8,0.0
+quantum computing,2016,9,1.0
+quantum computing,2016,10,0.0
+quantum computing,2016,11,0.0
+quantum computing,2016,12,0.0
+quantum computing,2017,1,0.0
+quantum computing,2017,2,1.0
+quantum computing,2017,3,1.0
+quantum computing,2017,4,1.0
+quantum computing,2017,5,1.0
+quantum computing,2017,6,1.0
+quantum computing,2017,7,1.0
+quantum computing,2017,8,1.0
+quantum computing,2017,9,1.0
+quantum computing,2017,10,1.0
+quantum computing,2017,11,1.0
+quantum computing,2017,12,1.0
+quantum computing,2018,1,1.0
+quantum computing,2018,2,1.0
+quantum computing,2018,3,1.0
+quantum computing,2018,4,1.0
+quantum computing,2018,5,1.0
+quantum computing,2018,6,1.0
+quantum computing,2018,7,1.0
+quantum computing,2018,8,1.0
+quantum computing,2018,9,1.0
+quantum computing,2018,10,1.0
+quantum computing,2018,11,1.0
+quantum computing,2018,12,1.0
+quantum computing,2019,1,1.0
+quantum computing,2019,2,1.0
+quantum computing,2019,3,1.0
+quantum computing,2019,4,1.0
+quantum computing,2019,5,1.0
+quantum computing,2019,6,1.0
+quantum computing,2019,7,1.0
+quantum computing,2019,8,1.0
+quantum computing,2019,9,1.0
+quantum computing,2019,10,2.0
+quantum computing,2019,11,1.0
+quantum computing,2019,12,1.0
+quantum computing,2020,1,1.0
+quantum computing,2020,2,1.0
+quantum computing,2020,3,1.0
+quantum computing,2020,4,1.0
+quantum computing,2020,5,1.0
+quantum computing,2020,6,1.0
+quantum computing,2020,7,1.0
+quantum computing,2020,8,1.0
+quantum computing,2020,9,1.0
+quantum computing,2020,10,1.0
+quantum computing,2020,11,1.0
+quantum computing,2020,12,1.0
+quantum computing,2021,1,1.0
+quantum computing,2021,2,1.0
+quantum computing,2021,3,1.0
+quantum computing,2021,4,1.0
+quantum computing,2021,5,1.0
+quantum computing,2021,6,1.0
+quantum computing,2021,7,1.0
+quantum computing,2021,8,1.0
+quantum computing,2021,9,1.0
+quantum computing,2021,10,1.0
+quantum computing,2021,11,1.0
+quantum computing,2021,12,1.0
+quantum computing,2022,1,1.0
+quantum computing,2022,2,1.0
+quantum computing,2022,3,1.0
+quantum computing,2022,4,1.0
+quantum computing,2022,5,1.0
+quantum computing,2022,6,1.0
+quantum computing,2022,7,2.0
+quantum computing,2022,8,1.0
+quantum computing,2022,9,1.0
+quantum computing,2022,10,1.0
+quantum computing,2022,11,1.0
+quantum computing,2022,12,1.0
+quantum computing,2023,1,2.0
+quantum computing,2023,2,2.0
+quantum computing,2023,3,2.0
+quantum computing,2023,4,1.0
+quantum computing,2023,5,2.0
+quantum computing,2023,6,2.0
+quantum computing,2023,7,2.0
+quantum computing,2023,8,2.0
+quantum computing,2023,9,2.0
+quantum computing,2023,10,2.0
+quantum computing,2023,11,2.0
+quantum computing,2023,12,2.0
+quantum computing,2024,1,2.0
+quantum computing,2024,2,2.0
+quantum computing,2024,3,2.0
+quantum computing,2024,4,2.0
+quantum computing,2024,5,2.0
+quantum computing,2024,6,2.0
+quantum computing,2024,7,2.0
+quantum computing,2024,8,2.0
+quantum computing,2024,9,2.0
+quantum computing,2024,10,2.0
+quantum computing,2024,11,3.0
+quantum computing,2024,12,7.0
+artificial general intelligence,2015,1,0.0
+artificial general intelligence,2015,2,0.0
+artificial general intelligence,2015,3,0.0
+artificial general intelligence,2015,4,0.0
+artificial general intelligence,2015,5,0.0
+artificial general intelligence,2015,6,0.0
+artificial general intelligence,2015,7,0.0
+artificial general intelligence,2015,8,0.0
+artificial general intelligence,2015,9,0.0
+artificial general intelligence,2015,10,0.0
+artificial general intelligence,2015,11,0.0
+artificial general intelligence,2015,12,0.0
+artificial general intelligence,2016,1,0.0
+artificial general intelligence,2016,2,0.0
+artificial general intelligence,2016,3,0.0
+artificial general intelligence,2016,4,0.0
+artificial general intelligence,2016,5,0.0
+artificial general intelligence,2016,6,0.0
+artificial general intelligence,2016,7,0.0
+artificial general intelligence,2016,8,0.0
+artificial general intelligence,2016,9,0.0
+artificial general intelligence,2016,10,0.0
+artificial general intelligence,2016,11,0.0
+artificial general intelligence,2016,12,0.0
+artificial general intelligence,2017,1,0.0
+artificial general intelligence,2017,2,0.0
+artificial general intelligence,2017,3,0.0
+artificial general intelligence,2017,4,0.0
+artificial general intelligence,2017,5,0.0
+artificial general intelligence,2017,6,0.0
+artificial general intelligence,2017,7,0.0
+artificial general intelligence,2017,8,0.0
+artificial general intelligence,2017,9,0.0
+artificial general intelligence,2017,10,0.0
+artificial general intelligence,2017,11,0.0
+artificial general intelligence,2017,12,0.0
+artificial general intelligence,2018,1,0.0
+artificial general intelligence,2018,2,0.0
+artificial general intelligence,2018,3,0.0
+artificial general intelligence,2018,4,0.0
+artificial general intelligence,2018,5,0.0
+artificial general intelligence,2018,6,0.0
+artificial general intelligence,2018,7,0.0
+artificial general intelligence,2018,8,0.0
+artificial general intelligence,2018,9,0.0
+artificial general intelligence,2018,10,0.0
+artificial general intelligence,2018,11,0.0
+artificial general intelligence,2018,12,0.0
+artificial general intelligence,2019,1,0.0
+artificial general intelligence,2019,2,0.0
+artificial general intelligence,2019,3,0.0
+artificial general intelligence,2019,4,0.0
+artificial general intelligence,2019,5,0.0
+artificial general intelligence,2019,6,0.0
+artificial general intelligence,2019,7,0.0
+artificial general intelligence,2019,8,0.0
+artificial general intelligence,2019,9,0.0
+artificial general intelligence,2019,10,0.0
+artificial general intelligence,2019,11,0.0
+artificial general intelligence,2019,12,0.0
+artificial general intelligence,2020,1,0.0
+artificial general intelligence,2020,2,0.0
+artificial general intelligence,2020,3,0.0
+artificial general intelligence,2020,4,0.0
+artificial general intelligence,2020,5,0.0
+artificial general intelligence,2020,6,0.0
+artificial general intelligence,2020,7,0.0
+artificial general intelligence,2020,8,0.0
+artificial general intelligence,2020,9,0.0
+artificial general intelligence,2020,10,0.0
+artificial general intelligence,2020,11,0.0
+artificial general intelligence,2020,12,0.0
+artificial general intelligence,2021,1,0.0
+artificial general intelligence,2021,2,0.0
+artificial general intelligence,2021,3,0.0
+artificial general intelligence,2021,4,0.0
+artificial general intelligence,2021,5,0.0
+artificial general intelligence,2021,6,0.0
+artificial general intelligence,2021,7,0.0
+artificial general intelligence,2021,8,0.0
+artificial general intelligence,2021,9,0.0
+artificial general intelligence,2021,10,0.0
+artificial general intelligence,2021,11,0.0
+artificial general intelligence,2021,12,0.0
+artificial general intelligence,2022,1,0.0
+artificial general intelligence,2022,2,0.0
+artificial general intelligence,2022,3,0.0
+artificial general intelligence,2022,4,0.0
+artificial general intelligence,2022,5,0.0
+artificial general intelligence,2022,6,0.0
+artificial general intelligence,2022,7,0.0
+artificial general intelligence,2022,8,0.0
+artificial general intelligence,2022,9,0.0
+artificial general intelligence,2022,10,0.0
+artificial general intelligence,2022,11,0.0
+artificial general intelligence,2022,12,0.0
+artificial general intelligence,2023,1,0.0
+artificial general intelligence,2023,2,0.0
+artificial general intelligence,2023,3,0.0
+artificial general intelligence,2023,4,0.0
+artificial general intelligence,2023,5,0.0
+artificial general intelligence,2023,6,0.0
+artificial general intelligence,2023,7,0.0
+artificial general intelligence,2023,8,0.0
+artificial general intelligence,2023,9,0.0
+artificial general intelligence,2023,10,0.0
+artificial general intelligence,2023,11,0.0
+artificial general intelligence,2023,12,0.0
+artificial general intelligence,2024,1,0.0
+artificial general intelligence,2024,2,0.0
+artificial general intelligence,2024,3,0.0
+artificial general intelligence,2024,4,0.0
+artificial general intelligence,2024,5,0.0
+artificial general intelligence,2024,6,0.0
+artificial general intelligence,2024,7,0.0
+artificial general intelligence,2024,8,0.0
+artificial general intelligence,2024,9,0.0
+artificial general intelligence,2024,10,0.0
+artificial general intelligence,2024,11,0.0
+artificial general intelligence,2024,12,0.0
+cryptocurrency,2015,1,0.0
+cryptocurrency,2015,2,0.0
+cryptocurrency,2015,3,0.0
+cryptocurrency,2015,4,0.0
+cryptocurrency,2015,5,0.0
+cryptocurrency,2015,6,0.0
+cryptocurrency,2015,7,0.0
+cryptocurrency,2015,8,0.0
+cryptocurrency,2015,9,0.0
+cryptocurrency,2015,10,0.0
+cryptocurrency,2015,11,0.0
+cryptocurrency,2015,12,0.0
+cryptocurrency,2016,1,0.0
+cryptocurrency,2016,2,1.0
+cryptocurrency,2016,3,1.0
+cryptocurrency,2016,4,1.0
+cryptocurrency,2016,5,1.0
+cryptocurrency,2016,6,1.0
+cryptocurrency,2016,7,1.0
+cryptocurrency,2016,8,1.0
+cryptocurrency,2016,9,1.0
+cryptocurrency,2016,10,1.0
+cryptocurrency,2016,11,1.0
+cryptocurrency,2016,12,1.0
+cryptocurrency,2017,1,1.0
+cryptocurrency,2017,2,1.0
+cryptocurrency,2017,3,2.0
+cryptocurrency,2017,4,3.0
+cryptocurrency,2017,5,8.0
+cryptocurrency,2017,6,15.0
+cryptocurrency,2017,7,13.0
+cryptocurrency,2017,8,19.0
+cryptocurrency,2017,9,20.0
+cryptocurrency,2017,10,18.0
+cryptocurrency,2017,11,31.0
+cryptocurrency,2017,12,94.0
+cryptocurrency,2018,1,100.0
+cryptocurrency,2018,2,51.0
+cryptocurrency,2018,3,29.0
+cryptocurrency,2018,4,22.0
+cryptocurrency,2018,5,19.0
+cryptocurrency,2018,6,15.0
+cryptocurrency,2018,7,14.0
+cryptocurrency,2018,8,13.0
+cryptocurrency,2018,9,13.0
+cryptocurrency,2018,10,11.0
+cryptocurrency,2018,11,12.0
+cryptocurrency,2018,12,10.0
+cryptocurrency,2019,1,9.0
+cryptocurrency,2019,2,10.0
+cryptocurrency,2019,3,8.0
+cryptocurrency,2019,4,9.0
+cryptocurrency,2019,5,11.0
+cryptocurrency,2019,6,13.0
+cryptocurrency,2019,7,10.0
+cryptocurrency,2019,8,8.0
+cryptocurrency,2019,9,7.0
+cryptocurrency,2019,10,7.0
+cryptocurrency,2019,11,7.0
+cryptocurrency,2019,12,7.0
+cryptocurrency,2020,1,8.0
+cryptocurrency,2020,2,8.0
+cryptocurrency,2020,3,9.0
+cryptocurrency,2020,4,9.0
+cryptocurrency,2020,5,10.0
+cryptocurrency,2020,6,8.0
+cryptocurrency,2020,7,10.0
+cryptocurrency,2020,8,12.0
+cryptocurrency,2020,9,10.0
+cryptocurrency,2020,10,9.0
+cryptocurrency,2020,11,13.0
+cryptocurrency,2020,12,16.0
+cryptocurrency,2021,1,34.0
+cryptocurrency,2021,2,49.0
+cryptocurrency,2021,3,32.0
+cryptocurrency,2021,4,54.0
+cryptocurrency,2021,5,89.0
+cryptocurrency,2021,6,40.0
+cryptocurrency,2021,7,25.0
+cryptocurrency,2021,8,30.0
+cryptocurrency,2021,9,30.0
+cryptocurrency,2021,10,44.0
+cryptocurrency,2021,11,58.0
+cryptocurrency,2021,12,35.0
+cryptocurrency,2022,1,40.0
+cryptocurrency,2022,2,35.0
+cryptocurrency,2022,3,26.0
+cryptocurrency,2022,4,23.0
+cryptocurrency,2022,5,27.0
+cryptocurrency,2022,6,20.0
+cryptocurrency,2022,7,15.0
+cryptocurrency,2022,8,14.0
+cryptocurrency,2022,9,14.0
+cryptocurrency,2022,10,11.0
+cryptocurrency,2022,11,15.0
+cryptocurrency,2022,12,12.0
+cryptocurrency,2023,1,12.0
+cryptocurrency,2023,2,11.0
+cryptocurrency,2023,3,11.0
+cryptocurrency,2023,4,11.0
+cryptocurrency,2023,5,9.0
+cryptocurrency,2023,6,9.0
+cryptocurrency,2023,7,9.0
+cryptocurrency,2023,8,9.0
+cryptocurrency,2023,9,8.0
+cryptocurrency,2023,10,8.0
+cryptocurrency,2023,11,9.0
+cryptocurrency,2023,12,10.0
+cryptocurrency,2024,1,10.0
+cryptocurrency,2024,2,10.0
+cryptocurrency,2024,3,13.0
+cryptocurrency,2024,4,9.0
+cryptocurrency,2024,5,8.0
+cryptocurrency,2024,6,8.0
+cryptocurrency,2024,7,9.0
+cryptocurrency,2024,8,8.0
+cryptocurrency,2024,9,8.0
+cryptocurrency,2024,10,7.0
+cryptocurrency,2024,11,13.0
+cryptocurrency,2024,12,15.0
+blockchain,2015,1,1.0
+blockchain,2015,2,1.0
+blockchain,2015,3,1.0
+blockchain,2015,4,1.0
+blockchain,2015,5,1.0
+blockchain,2015,6,1.0
+blockchain,2015,7,2.0
+blockchain,2015,8,2.0
+blockchain,2015,9,2.0
+blockchain,2015,10,3.0
+blockchain,2015,11,3.0
+blockchain,2015,12,4.0
+blockchain,2016,1,3.0
+blockchain,2016,2,4.0
+blockchain,2016,3,4.0
+blockchain,2016,4,5.0
+blockchain,2016,5,6.0
+blockchain,2016,6,6.0
+blockchain,2016,7,5.0
+blockchain,2016,8,5.0
+blockchain,2016,9,6.0
+blockchain,2016,10,7.0
+blockchain,2016,11,8.0
+blockchain,2016,12,8.0
+blockchain,2017,1,8.0
+blockchain,2017,2,9.0
+blockchain,2017,3,10.0
+blockchain,2017,4,10.0
+blockchain,2017,5,14.0
+blockchain,2017,6,17.0
+blockchain,2017,7,14.0
+blockchain,2017,8,17.0
+blockchain,2017,9,20.0
+blockchain,2017,10,25.0
+blockchain,2017,11,31.0
+blockchain,2017,12,51.0
+blockchain,2018,1,48.0
+blockchain,2018,2,32.0
+blockchain,2018,3,29.0
+blockchain,2018,4,24.0
+blockchain,2018,5,26.0
+blockchain,2018,6,23.0
+blockchain,2018,7,22.0
+blockchain,2018,8,21.0
+blockchain,2018,9,22.0
+blockchain,2018,10,22.0
+blockchain,2018,11,21.0
+blockchain,2018,12,16.0
+blockchain,2019,1,16.0
+blockchain,2019,2,17.0
+blockchain,2019,3,16.0
+blockchain,2019,4,19.0
+blockchain,2019,5,20.0
+blockchain,2019,6,19.0
+blockchain,2019,7,15.0
+blockchain,2019,8,14.0
+blockchain,2019,9,15.0
+blockchain,2019,10,14.0
+blockchain,2019,11,15.0
+blockchain,2019,12,13.0
+blockchain,2020,1,13.0
+blockchain,2020,2,14.0
+blockchain,2020,3,12.0
+blockchain,2020,4,13.0
+blockchain,2020,5,13.0
+blockchain,2020,6,13.0
+blockchain,2020,7,14.0
+blockchain,2020,8,14.0
+blockchain,2020,9,12.0
+blockchain,2020,10,12.0
+blockchain,2020,11,15.0
+blockchain,2020,12,15.0
+blockchain,2021,1,22.0
+blockchain,2021,2,30.0
+blockchain,2021,3,26.0
+blockchain,2021,4,26.0
+blockchain,2021,5,27.0
+blockchain,2021,6,20.0
+blockchain,2021,7,16.0
+blockchain,2021,8,18.0
+blockchain,2021,9,20.0
+blockchain,2021,10,22.0
+blockchain,2021,11,25.0
+blockchain,2021,12,23.0
+blockchain,2022,1,29.0
+blockchain,2022,2,28.0
+blockchain,2022,3,26.0
+blockchain,2022,4,24.0
+blockchain,2022,5,24.0
+blockchain,2022,6,20.0
+blockchain,2022,7,18.0
+blockchain,2022,8,17.0
+blockchain,2022,9,18.0
+blockchain,2022,10,17.0
+blockchain,2022,11,18.0
+blockchain,2022,12,15.0
+blockchain,2023,1,15.0
+blockchain,2023,2,16.0
+blockchain,2023,3,15.0
+blockchain,2023,4,14.0
+blockchain,2023,5,14.0
+blockchain,2023,6,14.0
+blockchain,2023,7,14.0
+blockchain,2023,8,14.0
+blockchain,2023,9,14.0
+blockchain,2023,10,14.0
+blockchain,2023,11,13.0
+blockchain,2023,12,14.0
+blockchain,2024,1,14.0
+blockchain,2024,2,17.0
+blockchain,2024,3,19.0
+blockchain,2024,4,18.0
+blockchain,2024,5,16.0
+blockchain,2024,6,15.0
+blockchain,2024,7,15.0
+blockchain,2024,8,16.0
+blockchain,2024,9,16.0
+blockchain,2024,10,15.0
+blockchain,2024,11,16.0
+blockchain,2024,12,18.0
+metaverse,2015,1,0.0
+metaverse,2015,2,0.0
+metaverse,2015,3,0.0
+metaverse,2015,4,0.0
+metaverse,2015,5,0.0
+metaverse,2015,6,0.0
+metaverse,2015,7,0.0
+metaverse,2015,8,0.0
+metaverse,2015,9,0.0
+metaverse,2015,10,0.0
+metaverse,2015,11,0.0
+metaverse,2015,12,0.0
+metaverse,2016,1,0.0
+metaverse,2016,2,0.0
+metaverse,2016,3,0.0
+metaverse,2016,4,0.0
+metaverse,2016,5,0.0
+metaverse,2016,6,0.0
+metaverse,2016,7,0.0
+metaverse,2016,8,0.0
+metaverse,2016,9,0.0
+metaverse,2016,10,0.0
+metaverse,2016,11,0.0
+metaverse,2016,12,0.0
+metaverse,2017,1,0.0
+metaverse,2017,2,0.0
+metaverse,2017,3,0.0
+metaverse,2017,4,0.0
+metaverse,2017,5,0.0
+metaverse,2017,6,0.0
+metaverse,2017,7,0.0
+metaverse,2017,8,0.0
+metaverse,2017,9,0.0
+metaverse,2017,10,0.5065040650406504
+metaverse,2017,11,0.5065040650406504
+metaverse,2017,12,0.0
+metaverse,2018,1,0.5065040650406504
+metaverse,2018,2,0.0
+metaverse,2018,3,0.0
+metaverse,2018,4,0.0
+metaverse,2018,5,0.0
+metaverse,2018,6,0.0
+metaverse,2018,7,0.0
+metaverse,2018,8,0.0
+metaverse,2018,9,0.0
+metaverse,2018,10,0.0
+metaverse,2018,11,0.0
+metaverse,2018,12,0.0
+metaverse,2019,1,0.0
+metaverse,2019,2,0.0
+metaverse,2019,3,0.0
+metaverse,2019,4,0.0
+metaverse,2019,5,0.0
+metaverse,2019,6,0.0
+metaverse,2019,7,0.0
+metaverse,2019,8,0.0
+metaverse,2019,9,0.0
+metaverse,2019,10,0.0
+metaverse,2019,11,0.0
+metaverse,2019,12,0.0
+metaverse,2020,1,0.0
+metaverse,2020,2,0.0
+metaverse,2020,3,0.0
+metaverse,2020,4,0.0
+metaverse,2020,5,0.0
+metaverse,2020,6,0.0
+metaverse,2020,7,0.0
+metaverse,2020,8,0.0
+metaverse,2020,9,0.0
+metaverse,2020,10,0.0
+metaverse,2020,11,0.0
+metaverse,2020,12,0.0
+metaverse,2021,1,0.0
+metaverse,2021,2,0.5065040650406504
+metaverse,2021,3,0.5065040650406504
+metaverse,2021,4,2.532520325203252
+metaverse,2021,5,2.026016260162601
+metaverse,2021,6,0.5065040650406504
+metaverse,2021,7,1.0130081300813008
+metaverse,2021,8,2.026016260162601
+metaverse,2021,9,2.026016260162601
+metaverse,2021,10,17.22113821138211
+metaverse,2021,11,35.45528455284553
+metaverse,2021,12,35.45528455284553
+metaverse,2022,1,48.11788617886179
+metaverse,2022,2,34.44227642276422
+metaverse,2022,3,22.286178861788617
+metaverse,2022,4,18.740650406504063
+metaverse,2022,5,15.19512195121951
+metaverse,2022,6,12.15609756097561
+metaverse,2022,7,10.63658536585366
+metaverse,2022,8,10.63658536585366
+metaverse,2022,9,10.63658536585366
+metaverse,2022,10,13.16910569105691
+metaverse,2022,11,11.649593495934958
+metaverse,2022,12,9.623577235772355
+metaverse,2023,1,7.597560975609755
+metaverse,2023,2,7.597560975609755
+metaverse,2023,3,7.0910569105691055
+metaverse,2023,4,5.571544715447154
+metaverse,2023,5,5.065040650406504
+metaverse,2023,6,4.558536585365854
+metaverse,2023,7,4.558536585365854
+metaverse,2023,8,3.5455284552845527
+metaverse,2023,9,3.5455284552845527
+metaverse,2023,10,5.065040650406504
+metaverse,2023,11,3.5455284552845527
+metaverse,2023,12,3.0390243902439025
+metaverse,2024,1,4.052032520325203
+metaverse,2024,2,3.0390243902439025
+metaverse,2024,3,3.0390243902439025
+metaverse,2024,4,3.0390243902439025
+metaverse,2024,5,2.532520325203252
+metaverse,2024,6,2.532520325203252
+metaverse,2024,7,2.532520325203252
+metaverse,2024,8,2.532520325203252
+metaverse,2024,9,2.026016260162601
+metaverse,2024,10,2.026016260162601
+metaverse,2024,11,2.026016260162601
+metaverse,2024,12,2.026016260162601
+edge computing,2015,1,0.0
+edge computing,2015,2,0.0
+edge computing,2015,3,0.0
+edge computing,2015,4,0.0
+edge computing,2015,5,0.0
+edge computing,2015,6,0.0
+edge computing,2015,7,0.0
+edge computing,2015,8,0.0
+edge computing,2015,9,0.0
+edge computing,2015,10,0.0
+edge computing,2015,11,0.0
+edge computing,2015,12,0.0
+edge computing,2016,1,0.0
+edge computing,2016,2,0.0
+edge computing,2016,3,0.0
+edge computing,2016,4,0.0
+edge computing,2016,5,0.0
+edge computing,2016,6,0.0
+edge computing,2016,7,0.0
+edge computing,2016,8,0.0
+edge computing,2016,9,0.0
+edge computing,2016,10,0.0
+edge computing,2016,11,0.0
+edge computing,2016,12,0.0
+edge computing,2017,1,0.0
+edge computing,2017,2,0.0
+edge computing,2017,3,0.0
+edge computing,2017,4,0.0
+edge computing,2017,5,0.0
+edge computing,2017,6,0.0
+edge computing,2017,7,0.0
+edge computing,2017,8,0.0
+edge computing,2017,9,0.0
+edge computing,2017,10,0.0
+edge computing,2017,11,0.5065040650406504
+edge computing,2017,12,0.0
+edge computing,2018,1,0.5065040650406504
+edge computing,2018,2,0.5065040650406504
+edge computing,2018,3,0.5065040650406504
+edge computing,2018,4,0.5065040650406504
+edge computing,2018,5,0.5065040650406504
+edge computing,2018,6,0.5065040650406504
+edge computing,2018,7,0.5065040650406504
+edge computing,2018,8,0.5065040650406504
+edge computing,2018,9,0.5065040650406504
+edge computing,2018,10,0.5065040650406504
+edge computing,2018,11,0.5065040650406504
+edge computing,2018,12,0.5065040650406504
+edge computing,2019,1,0.5065040650406504
+edge computing,2019,2,0.5065040650406504
+edge computing,2019,3,0.5065040650406504
+edge computing,2019,4,0.5065040650406504
+edge computing,2019,5,0.5065040650406504
+edge computing,2019,6,0.5065040650406504
+edge computing,2019,7,0.5065040650406504
+edge computing,2019,8,0.5065040650406504
+edge computing,2019,9,0.5065040650406504
+edge computing,2019,10,0.5065040650406504
+edge computing,2019,11,0.5065040650406504
+edge computing,2019,12,0.5065040650406504
+edge computing,2020,1,0.5065040650406504
+edge computing,2020,2,0.5065040650406504
+edge computing,2020,3,0.5065040650406504
+edge computing,2020,4,0.5065040650406504
+edge computing,2020,5,0.5065040650406504
+edge computing,2020,6,0.5065040650406504
+edge computing,2020,7,0.5065040650406504
+edge computing,2020,8,0.5065040650406504
+edge computing,2020,9,0.5065040650406504
+edge computing,2020,10,0.5065040650406504
+edge computing,2020,11,0.5065040650406504
+edge computing,2020,12,0.5065040650406504
+edge computing,2021,1,0.5065040650406504
+edge computing,2021,2,0.5065040650406504
+edge computing,2021,3,0.5065040650406504
+edge computing,2021,4,0.5065040650406504
+edge computing,2021,5,0.5065040650406504
+edge computing,2021,6,0.5065040650406504
+edge computing,2021,7,0.5065040650406504
+edge computing,2021,8,0.5065040650406504
+edge computing,2021,9,1.0130081300813008
+edge computing,2021,10,0.5065040650406504
+edge computing,2021,11,1.0130081300813008
+edge computing,2021,12,0.5065040650406504
+edge computing,2022,1,1.0130081300813008
+edge computing,2022,2,1.0130081300813008
+edge computing,2022,3,1.0130081300813008
+edge computing,2022,4,1.0130081300813008
+edge computing,2022,5,1.0130081300813008
+edge computing,2022,6,1.0130081300813008
+edge computing,2022,7,0.5065040650406504
+edge computing,2022,8,1.0130081300813008
+edge computing,2022,9,0.5065040650406504
+edge computing,2022,10,0.5065040650406504
+edge computing,2022,11,0.5065040650406504
+edge computing,2022,12,0.5065040650406504
+edge computing,2023,1,1.0130081300813008
+edge computing,2023,2,1.0130081300813008
+edge computing,2023,3,0.5065040650406504
+edge computing,2023,4,0.5065040650406504
+edge computing,2023,5,0.5065040650406504
+edge computing,2023,6,0.5065040650406504
+edge computing,2023,7,0.5065040650406504
+edge computing,2023,8,0.5065040650406504
+edge computing,2023,9,0.5065040650406504
+edge computing,2023,10,0.5065040650406504
+edge computing,2023,11,0.5065040650406504
+edge computing,2023,12,0.5065040650406504
+edge computing,2024,1,0.5065040650406504
+edge computing,2024,2,0.5065040650406504
+edge computing,2024,3,0.5065040650406504
+edge computing,2024,4,0.5065040650406504
+edge computing,2024,5,0.5065040650406504
+edge computing,2024,6,0.5065040650406504
+edge computing,2024,7,0.5065040650406504
+edge computing,2024,8,0.5065040650406504
+edge computing,2024,9,0.5065040650406504
+edge computing,2024,10,0.5065040650406504
+edge computing,2024,11,0.5065040650406504
+edge computing,2024,12,0.5065040650406504
+generative ai,2015,1,0.0
+generative ai,2015,2,0.0
+generative ai,2015,3,0.0
+generative ai,2015,4,0.0
+generative ai,2015,5,0.0
+generative ai,2015,6,0.0
+generative ai,2015,7,0.0
+generative ai,2015,8,0.0
+generative ai,2015,9,0.0
+generative ai,2015,10,0.0
+generative ai,2015,11,0.0
+generative ai,2015,12,0.0
+generative ai,2016,1,0.0
+generative ai,2016,2,0.0
+generative ai,2016,3,0.0
+generative ai,2016,4,0.0
+generative ai,2016,5,0.0
+generative ai,2016,6,0.0
+generative ai,2016,7,0.0
+generative ai,2016,8,0.0
+generative ai,2016,9,0.0
+generative ai,2016,10,0.0
+generative ai,2016,11,0.0
+generative ai,2016,12,0.0
+generative ai,2017,1,0.0
+generative ai,2017,2,0.0
+generative ai,2017,3,0.0
+generative ai,2017,4,0.0
+generative ai,2017,5,0.0
+generative ai,2017,6,0.0
+generative ai,2017,7,0.0
+generative ai,2017,8,0.0
+generative ai,2017,9,0.0
+generative ai,2017,10,0.0
+generative ai,2017,11,0.0
+generative ai,2017,12,0.0
+generative ai,2018,1,0.0
+generative ai,2018,2,0.0
+generative ai,2018,3,0.0
+generative ai,2018,4,0.0
+generative ai,2018,5,0.0
+generative ai,2018,6,0.0
+generative ai,2018,7,0.0
+generative ai,2018,8,0.0
+generative ai,2018,9,0.0
+generative ai,2018,10,0.0
+generative ai,2018,11,0.0
+generative ai,2018,12,0.0
+generative ai,2019,1,0.0
+generative ai,2019,2,0.0
+generative ai,2019,3,0.0
+generative ai,2019,4,0.0
+generative ai,2019,5,0.0
+generative ai,2019,6,0.0
+generative ai,2019,7,0.0
+generative ai,2019,8,0.0
+generative ai,2019,9,0.0
+generative ai,2019,10,0.0
+generative ai,2019,11,0.0
+generative ai,2019,12,0.0
+generative ai,2020,1,0.0
+generative ai,2020,2,0.0
+generative ai,2020,3,0.0
+generative ai,2020,4,0.0
+generative ai,2020,5,0.0
+generative ai,2020,6,0.0
+generative ai,2020,7,0.0
+generative ai,2020,8,0.0
+generative ai,2020,9,0.0
+generative ai,2020,10,0.0
+generative ai,2020,11,0.0
+generative ai,2020,12,0.0
+generative ai,2021,1,0.0
+generative ai,2021,2,0.0
+generative ai,2021,3,0.0
+generative ai,2021,4,0.0
+generative ai,2021,5,0.0
+generative ai,2021,6,0.0
+generative ai,2021,7,0.0
+generative ai,2021,8,0.0
+generative ai,2021,9,0.0
+generative ai,2021,10,0.0
+generative ai,2021,11,0.0
+generative ai,2021,12,0.0
+generative ai,2022,1,0.0
+generative ai,2022,2,0.0
+generative ai,2022,3,0.0
+generative ai,2022,4,0.0
+generative ai,2022,5,0.0
+generative ai,2022,6,0.0
+generative ai,2022,7,0.0
+generative ai,2022,8,0.0
+generative ai,2022,9,0.0
+generative ai,2022,10,0.0
+generative ai,2022,11,0.5065040650406504
+generative ai,2022,12,0.5065040650406504
+generative ai,2023,1,0.5065040650406504
+generative ai,2023,2,1.5195121951219512
+generative ai,2023,3,2.026016260162601
+generative ai,2023,4,2.532520325203252
+generative ai,2023,5,4.558536585365854
+generative ai,2023,6,7.597560975609755
+generative ai,2023,7,6.584552845528455
+generative ai,2023,8,6.584552845528455
+generative ai,2023,9,6.584552845528455
+generative ai,2023,10,6.584552845528455
+generative ai,2023,11,6.078048780487805
+generative ai,2023,12,6.078048780487805
+generative ai,2024,1,7.0910569105691055
+generative ai,2024,2,8.104065040650406
+generative ai,2024,3,7.597560975609755
+generative ai,2024,4,7.597560975609755
+generative ai,2024,5,7.597560975609755
+generative ai,2024,6,8.104065040650406
+generative ai,2024,7,8.104065040650406
+generative ai,2024,8,6.584552845528455
+generative ai,2024,9,6.584552845528455
+generative ai,2024,10,7.0910569105691055
+generative ai,2024,11,6.584552845528455
+generative ai,2024,12,6.584552845528455
+chatbot,2015,1,0.5065040650406504
+chatbot,2015,2,0.5065040650406504
+chatbot,2015,3,0.5065040650406504
+chatbot,2015,4,0.5065040650406504
+chatbot,2015,5,0.5065040650406504
+chatbot,2015,6,0.5065040650406504
+chatbot,2015,7,0.5065040650406504
+chatbot,2015,8,0.5065040650406504
+chatbot,2015,9,0.5065040650406504
+chatbot,2015,10,0.5065040650406504
+chatbot,2015,11,0.5065040650406504
+chatbot,2015,12,0.5065040650406504
+chatbot,2016,1,0.5065040650406504
+chatbot,2016,2,0.5065040650406504
+chatbot,2016,3,1.0130081300813008
+chatbot,2016,4,1.0130081300813008
+chatbot,2016,5,1.0130081300813008
+chatbot,2016,6,1.0130081300813008
+chatbot,2016,7,1.0130081300813008
+chatbot,2016,8,1.0130081300813008
+chatbot,2016,9,1.0130081300813008
+chatbot,2016,10,1.5195121951219512
+chatbot,2016,11,1.5195121951219512
+chatbot,2016,12,1.5195121951219512
+chatbot,2017,1,1.5195121951219512
+chatbot,2017,2,2.026016260162601
+chatbot,2017,3,2.532520325203252
+chatbot,2017,4,2.026016260162601
+chatbot,2017,5,2.532520325203252
+chatbot,2017,6,2.532520325203252
+chatbot,2017,7,2.532520325203252
+chatbot,2017,8,3.0390243902439025
+chatbot,2017,9,3.0390243902439025
+chatbot,2017,10,3.0390243902439025
+chatbot,2017,11,3.0390243902439025
+chatbot,2017,12,3.0390243902439025
+chatbot,2018,1,3.5455284552845527
+chatbot,2018,2,3.5455284552845527
+chatbot,2018,3,3.5455284552845527
+chatbot,2018,4,3.0390243902439025
+chatbot,2018,5,3.0390243902439025
+chatbot,2018,6,3.0390243902439025
+chatbot,2018,7,3.0390243902439025
+chatbot,2018,8,3.0390243902439025
+chatbot,2018,9,3.5455284552845527
+chatbot,2018,10,3.5455284552845527
+chatbot,2018,11,3.0390243902439025
+chatbot,2018,12,2.532520325203252
+chatbot,2019,1,3.0390243902439025
+chatbot,2019,2,3.5455284552845527
+chatbot,2019,3,3.5455284552845527
+chatbot,2019,4,3.5455284552845527
+chatbot,2019,5,3.5455284552845527
+chatbot,2019,6,3.5455284552845527
+chatbot,2019,7,3.5455284552845527
+chatbot,2019,8,3.5455284552845527
+chatbot,2019,9,3.5455284552845527
+chatbot,2019,10,3.5455284552845527
+chatbot,2019,11,3.5455284552845527
+chatbot,2019,12,3.5455284552845527
+chatbot,2020,1,4.052032520325203
+chatbot,2020,2,4.052032520325203
+chatbot,2020,3,4.052032520325203
+chatbot,2020,4,4.052032520325203
+chatbot,2020,5,4.052032520325203
+chatbot,2020,6,4.558536585365854
+chatbot,2020,7,4.052032520325203
+chatbot,2020,8,4.052032520325203
+chatbot,2020,9,4.052032520325203
+chatbot,2020,10,3.5455284552845527
+chatbot,2020,11,3.5455284552845527
+chatbot,2020,12,3.0390243902439025
+chatbot,2021,1,3.5455284552845527
+chatbot,2021,2,3.5455284552845527
+chatbot,2021,3,3.5455284552845527
+chatbot,2021,4,3.5455284552845527
+chatbot,2021,5,3.5455284552845527
+chatbot,2021,6,3.5455284552845527
+chatbot,2021,7,3.5455284552845527
+chatbot,2021,8,3.5455284552845527
+chatbot,2021,9,3.5455284552845527
+chatbot,2021,10,3.5455284552845527
+chatbot,2021,11,3.5455284552845527
+chatbot,2021,12,3.5455284552845527
+chatbot,2022,1,4.052032520325203
+chatbot,2022,2,4.052032520325203
+chatbot,2022,3,4.558536585365854
+chatbot,2022,4,4.558536585365854
+chatbot,2022,5,4.052032520325203
+chatbot,2022,6,4.558536585365854
+chatbot,2022,7,4.052032520325203
+chatbot,2022,8,4.052032520325203
+chatbot,2022,9,4.052032520325203
+chatbot,2022,10,3.5455284552845527
+chatbot,2022,11,4.052032520325203
+chatbot,2022,12,11.649593495934958
+chatbot,2023,1,15.701626016260162
+chatbot,2023,2,21.27317073170732
+chatbot,2023,3,16.714634146341464
+chatbot,2023,4,15.19512195121951
+chatbot,2023,5,14.68861788617886
+chatbot,2023,6,12.15609756097561
+chatbot,2023,7,12.15609756097561
+chatbot,2023,8,10.130081300813009
+chatbot,2023,9,11.143089430894308
+chatbot,2023,10,11.143089430894308
+chatbot,2023,11,11.649593495934958
+chatbot,2023,12,9.623577235772355
+chatbot,2024,1,10.63658536585366
+chatbot,2024,2,11.649593495934958
+chatbot,2024,3,11.143089430894308
+chatbot,2024,4,11.649593495934958
+chatbot,2024,5,11.649593495934958
+chatbot,2024,6,11.143089430894308
+chatbot,2024,7,10.63658536585366
+chatbot,2024,8,11.143089430894308
+chatbot,2024,9,10.63658536585366
+chatbot,2024,10,12.15609756097561
+chatbot,2024,11,12.66260162601626
+chatbot,2024,12,12.15609756097561
+augmented reality,2015,1,2.026016260162601
+augmented reality,2015,2,2.026016260162601
+augmented reality,2015,3,2.026016260162601
+augmented reality,2015,4,2.026016260162601
+augmented reality,2015,5,2.026016260162601
+augmented reality,2015,6,1.5195121951219512
+augmented reality,2015,7,1.5195121951219512
+augmented reality,2015,8,1.5195121951219512
+augmented reality,2015,9,2.026016260162601
+augmented reality,2015,10,2.026016260162601
+augmented reality,2015,11,2.026016260162601
+augmented reality,2015,12,1.5195121951219512
+augmented reality,2016,1,1.5195121951219512
+augmented reality,2016,2,2.026016260162601
+augmented reality,2016,3,2.026016260162601
+augmented reality,2016,4,2.026016260162601
+augmented reality,2016,5,2.026016260162601
+augmented reality,2016,6,2.026016260162601
+augmented reality,2016,7,4.052032520325203
+augmented reality,2016,8,3.0390243902439025
+augmented reality,2016,9,2.532520325203252
+augmented reality,2016,10,2.532520325203252
+augmented reality,2016,11,2.532520325203252
+augmented reality,2016,12,2.532520325203252
+augmented reality,2017,1,2.532520325203252
+augmented reality,2017,2,2.532520325203252
+augmented reality,2017,3,3.0390243902439025
+augmented reality,2017,4,3.0390243902439025
+augmented reality,2017,5,2.532520325203252
+augmented reality,2017,6,3.0390243902439025
+augmented reality,2017,7,2.532520325203252
+augmented reality,2017,8,2.532520325203252
+augmented reality,2017,9,5.065040650406504
+augmented reality,2017,10,4.052032520325203
+augmented reality,2017,11,4.052032520325203
+augmented reality,2017,12,3.5455284552845527
+augmented reality,2018,1,3.5455284552845527
+augmented reality,2018,2,3.5455284552845527
+augmented reality,2018,3,3.0390243902439025
+augmented reality,2018,4,3.0390243902439025
+augmented reality,2018,5,3.0390243902439025
+augmented reality,2018,6,2.532520325203252
+augmented reality,2018,7,2.532520325203252
+augmented reality,2018,8,2.532520325203252
+augmented reality,2018,9,3.0390243902439025
+augmented reality,2018,10,3.0390243902439025
+augmented reality,2018,11,3.0390243902439025
+augmented reality,2018,12,2.532520325203252
+augmented reality,2019,1,2.532520325203252
+augmented reality,2019,2,3.0390243902439025
+augmented reality,2019,3,3.0390243902439025
+augmented reality,2019,4,2.532520325203252
+augmented reality,2019,5,2.532520325203252
+augmented reality,2019,6,2.532520325203252
+augmented reality,2019,7,2.532520325203252
+augmented reality,2019,8,2.532520325203252
+augmented reality,2019,9,3.0390243902439025
+augmented reality,2019,10,2.532520325203252
+augmented reality,2019,11,3.0390243902439025
+augmented reality,2019,12,2.532520325203252
+augmented reality,2020,1,2.532520325203252
+augmented reality,2020,2,2.532520325203252
+augmented reality,2020,3,2.532520325203252
+augmented reality,2020,4,2.532520325203252
+augmented reality,2020,5,2.532520325203252
+augmented reality,2020,6,2.532520325203252
+augmented reality,2020,7,3.0390243902439025
+augmented reality,2020,8,2.026016260162601
+augmented reality,2020,9,2.532520325203252
+augmented reality,2020,10,2.532520325203252
+augmented reality,2020,11,2.026016260162601
+augmented reality,2020,12,2.026016260162601
+augmented reality,2021,1,2.026016260162601
+augmented reality,2021,2,2.026016260162601
+augmented reality,2021,3,2.026016260162601
+augmented reality,2021,4,2.026016260162601
+augmented reality,2021,5,2.026016260162601
+augmented reality,2021,6,2.026016260162601
+augmented reality,2021,7,2.026016260162601
+augmented reality,2021,8,2.026016260162601
+augmented reality,2021,9,2.026016260162601
+augmented reality,2021,10,2.532520325203252
+augmented reality,2021,11,2.532520325203252
+augmented reality,2021,12,2.026016260162601
+augmented reality,2022,1,2.532520325203252
+augmented reality,2022,2,3.0390243902439025
+augmented reality,2022,3,3.0390243902439025
+augmented reality,2022,4,2.532520325203252
+augmented reality,2022,5,2.532520325203252
+augmented reality,2022,6,2.532520325203252
+augmented reality,2022,7,2.026016260162601
+augmented reality,2022,8,2.026016260162601
+augmented reality,2022,9,2.532520325203252
+augmented reality,2022,10,2.532520325203252
+augmented reality,2022,11,2.532520325203252
+augmented reality,2022,12,2.026016260162601
+augmented reality,2023,1,2.026016260162601
+augmented reality,2023,2,2.532520325203252
+augmented reality,2023,3,2.026016260162601
+augmented reality,2023,4,2.026016260162601
+augmented reality,2023,5,2.026016260162601
+augmented reality,2023,6,2.532520325203252
+augmented reality,2023,7,2.026016260162601
+augmented reality,2023,8,2.026016260162601
+augmented reality,2023,9,2.026016260162601
+augmented reality,2023,10,2.026016260162601
+augmented reality,2023,11,2.026016260162601
+augmented reality,2023,12,2.026016260162601
+augmented reality,2024,1,2.026016260162601
+augmented reality,2024,2,2.532520325203252
+augmented reality,2024,3,2.532520325203252
+augmented reality,2024,4,2.026016260162601
+augmented reality,2024,5,2.026016260162601
+augmented reality,2024,6,2.026016260162601
+augmented reality,2024,7,2.026016260162601
+augmented reality,2024,8,1.5195121951219512
+augmented reality,2024,9,2.026016260162601
+augmented reality,2024,10,2.026016260162601
+augmented reality,2024,11,2.026016260162601
+augmented reality,2024,12,1.5195121951219512

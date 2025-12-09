@@ -1,0 +1,101 @@
+buzzword,year,interest
+big data,2015,10.17
+big data,2016,10.33
+big data,2017,10.92
+big data,2018,10.33
+big data,2019,9.75
+big data,2020,8.75
+big data,2021,7.92
+big data,2022,9.5
+big data,2023,8.5
+big data,2024,7.42
+quantum computing,2015,0.42
+quantum computing,2016,0.25
+quantum computing,2017,0.92
+quantum computing,2018,1.0
+quantum computing,2019,1.08
+quantum computing,2020,1.0
+quantum computing,2021,1.0
+quantum computing,2022,1.08
+quantum computing,2023,1.92
+quantum computing,2024,2.5
+artificial general intelligence,2015,0.0
+artificial general intelligence,2016,0.0
+artificial general intelligence,2017,0.0
+artificial general intelligence,2018,0.0
+artificial general intelligence,2019,0.0
+artificial general intelligence,2020,0.0
+artificial general intelligence,2021,0.0
+artificial general intelligence,2022,0.0
+artificial general intelligence,2023,0.0
+artificial general intelligence,2024,0.0
+blockchain,2015,1.83
+blockchain,2016,5.58
+blockchain,2017,18.83
+blockchain,2018,25.5
+blockchain,2019,16.08
+blockchain,2020,13.33
+blockchain,2021,22.92
+blockchain,2022,21.17
+blockchain,2023,14.25
+blockchain,2024,16.25
+cryptocurrency,2015,0.0
+cryptocurrency,2016,0.92
+cryptocurrency,2017,18.75
+cryptocurrency,2018,25.75
+cryptocurrency,2019,8.83
+cryptocurrency,2020,10.17
+cryptocurrency,2021,43.33
+cryptocurrency,2022,21.0
+cryptocurrency,2023,9.67
+cryptocurrency,2024,9.83
+metaverse,2015,0.0
+metaverse,2016,0.0
+metaverse,2017,0.08
+metaverse,2018,0.04
+metaverse,2019,0.0
+metaverse,2020,0.0
+metaverse,2021,8.27
+metaverse,2022,18.11
+metaverse,2023,5.07
+metaverse,2024,2.62
+edge computing,2015,0.0
+edge computing,2016,0.0
+edge computing,2017,0.04
+edge computing,2018,0.51
+edge computing,2019,0.51
+edge computing,2020,0.51
+edge computing,2021,0.59
+edge computing,2022,0.8
+edge computing,2023,0.59
+edge computing,2024,0.51
+generative ai,2015,0.0
+generative ai,2016,0.0
+generative ai,2017,0.0
+generative ai,2018,0.0
+generative ai,2019,0.0
+generative ai,2020,0.0
+generative ai,2021,0.0
+generative ai,2022,0.08
+generative ai,2023,4.77
+generative ai,2024,7.3
+chatbot,2015,0.51
+chatbot,2016,1.06
+chatbot,2017,2.57
+chatbot,2018,3.21
+chatbot,2019,3.5
+chatbot,2020,3.93
+chatbot,2021,3.55
+chatbot,2022,4.77
+chatbot,2023,13.46
+chatbot,2024,11.44
+augmented reality,2015,1.86
+augmented reality,2016,2.41
+augmented reality,2017,3.21
+augmented reality,2018,2.95
+augmented reality,2019,2.7
+augmented reality,2020,2.45
+augmented reality,2021,2.11
+augmented reality,2022,2.49
+augmented reality,2023,2.11
+augmented reality,2024,2.03
