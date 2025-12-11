@@ -5,7 +5,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import scipy.stats as stats
 
-# ------------------ paths ------------------
 ANNOT_PATH = Path("../data/data_openalex/annotation/hype_with_openalex_meta.csv")
 TS_PATH = Path("../data/buzzword_timeseries_master.csv")
 OUT_PATH = Path("../data/data_openalex/annotation/hype_with_context.csv")
