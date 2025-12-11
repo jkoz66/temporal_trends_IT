@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 from pathlib import Path
 
 
@@ -76,7 +77,7 @@ def scatter_grid(df: pd.DataFrame, x_col: str, y_col: str,
     # Larger figure size so details survive ACM column scaling
     fig, axes = plt.subplots(
         n_rows, n_cols,
-        figsize=(6 * n_cols, 3 * n_rows),  # e.g., for 10 keywords: 12 x 15 inches
+        figsize=(6 * n_cols, 3 * n_rows),
         sharex=False,
         sharey=False
     )
@@ -97,12 +98,27 @@ def scatter_grid(df: pd.DataFrame, x_col: str, y_col: str,
         ax.set_ylabel(y_label, fontsize=9)
         ax.grid(True, linestyle=":", alpha=0.5)
 
+        ax.set_ylim(-0.05, 1.05)
+        ax.set_xlim(-0.05, 1.05)
+
     # Hide unused axes (for example if n_keywords is odd)
     for ax in axes[n_keywords:]:
         ax.set_visible(False)
 
     fig.suptitle(title, fontsize=12, y=0.98)
     plt.tight_layout(rect=[0, 0, 1, 0.95])
+    fig.subplots_adjust(wspace=0.16)
+
+    sep_line = Line2D(
+        [0.5, 0.5],     #x-coordinates
+        [0.02, 0.945],  #y-coordinates
+        transform=fig.transFigure,
+        linewidth=0.8,
+        color="grey",
+        alpha=0.7,
+    )
+    fig.add_artist(sep_line)
+
     plt.savefig(out_path, dpi=300, bbox_inches="tight")
     plt.close()
     print(f"Saved scatter grid to: {out_path}")
@@ -124,7 +140,10 @@ def dual_axis_grid(df: pd.DataFrame, left_col: str, right_col: str,
     n_cols = 2
     n_rows = (n_keywords + n_cols - 1) // n_cols
 
-    fig, axes = plt.subplots(n_rows, n_cols, figsize=(10, 12))  # Fixed size
+    fig, axes = plt.subplots(
+        n_rows, n_cols,
+        figsize=(10, 12),
+    )  # Fixed size
     axes = axes.flatten()
 
     for ax, keyword in zip(axes, keywords):
@@ -143,6 +162,8 @@ def dual_axis_grid(df: pd.DataFrame, left_col: str, right_col: str,
         ax.set_ylabel(left_label, fontsize=8)
         ax.grid(True, linestyle=":", alpha=0.5)
 
+        ax.set_ylim(-0.05, 1.05)
+
         # Right axis: public_norm
         ax2 = ax.twinx()
         ax2.plot(
@@ -154,12 +175,26 @@ def dual_axis_grid(df: pd.DataFrame, left_col: str, right_col: str,
         )
         ax2.set_ylabel(right_label, fontsize=8)
 
+        ax2.set_ylim(-0.05, 1.05)
+
     # Hide unused axes if n_keywords is odd
     for ax in axes[n_keywords:]:
         ax.set_visible(False)
 
     fig.suptitle(title, fontsize=12, y=0.98)
     plt.tight_layout(rect=[0, 0, 1, 0.95])
+    fig.subplots_adjust(wspace=0.4)
+
+    sep_line = Line2D(
+        [0.5, 0.5],     #x-coordinates
+        [0.02, 0.945],  #y-coordinates
+        transform=fig.transFigure,
+        linewidth=0.8,
+        color="grey",
+        alpha=0.7,
+    )
+    fig.add_artist(sep_line)
+
     plt.savefig(out_path, dpi=300, bbox_inches="tight")
     plt.close()
     print(f"Saved dual-axis grid to: {out_path}")

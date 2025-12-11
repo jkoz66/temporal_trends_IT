@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 from pathlib import Path
 
 
@@ -94,6 +95,8 @@ def plot_rq1_small_multiples(df: pd.DataFrame, out_path: Path) -> None:
         ax.set_xlabel("Year", fontsize=9)
         ax.set_ylabel("Normalized academic\nattention", fontsize=9)
 
+        ax.set_ylim(-0.05, 1.05)
+
     # Hide unused axes if count is odd
     for ax in axes[n_keywords:]:
         ax.set_visible(False)
@@ -101,6 +104,18 @@ def plot_rq1_small_multiples(df: pd.DataFrame, out_path: Path) -> None:
     fig.suptitle("Academic hype cycles by keyword", fontsize=12, y=0.98)
 
     plt.tight_layout(rect=[0, 0, 1, 0.95])
+    fig.subplots_adjust(wspace=0.25)
+
+    sep_line = Line2D(
+        [0.5, 0.5],     #x-coordinates
+        [0.02, 0.945],  #y-coordinates
+        transform=fig.transFigure,
+        linewidth=0.8,
+        color="grey",
+        alpha=0.7,
+    )
+    fig.add_artist(sep_line)
+
     fig.savefig(out_path, dpi=300, bbox_inches="tight")
     plt.close()
     print(f"Saved small-multiples RQ1 plot to: {out_path}")
