@@ -108,25 +108,34 @@ def main() -> None:
     print("Spearman:",
           dfc["hype_mean"].corr(dfc["academic_norm_in_year"], method="spearman"))
 
-    # ---------- 5) Plots ----------
+        # ---------- 5) Plots (RQ3 figures) ----------
 
-    # (a) Hype vs public interest at publication year
+    # (a) Global: Hype vs public interest at publication year
     plt.figure(figsize=(6, 4))
-    plt.scatter(dfc["hype_mean"], dfc["external_interest_in_publication_year"])
-    plt.xlabel("Title hype score (hype_mean)")
-    plt.ylabel("External interest in publication year (public_norm)")
-    plt.title("Paper-level Hype vs Public Interest at Publication Year")
+    plt.scatter(
+        dfc["hype_mean"],
+        dfc["external_interest_in_publication_year"],
+        alpha=0.8,
+    )
+    plt.xlabel("Title hype score (mean of annotators)")
+    plt.ylabel("Public interest (public_norm) in year")
+    plt.title("Hype Score vs Public Interest in Publication Year")
     plt.tight_layout()
-    plt.savefig(FIG_DIR / "hype_vs_public_interest.png", dpi=300)
+    out_main_public = FIG_DIR / "hype_vs_public_interest.png"
+    plt.savefig(out_main_public, dpi=300)
     plt.close()
-    print(f"[SAVE] {FIG_DIR / 'hype_vs_public_interest.png'}")
+    print(f"[SAVE] {out_main_public}")
 
-    # (b) Same, coloured by keyword (simple separate panels via loop)
+    # (b) Per-keyword panels: Hype vs public interest
     for kw, sub in dfc.groupby("keyword"):
         plt.figure(figsize=(5, 4))
-        plt.scatter(sub["hype_mean"], sub["external_interest_in_publication_year"])
-        plt.xlabel("Title hype score (hype_mean)")
-        plt.ylabel("External interest (public_norm)")
+        plt.scatter(
+            sub["hype_mean"],
+            sub["external_interest_in_publication_year"],
+            alpha=0.8,
+        )
+        plt.xlabel("Title hype score (mean of annotators)")
+        plt.ylabel("Public interest (public_norm) in year")
         plt.title(f"Hype vs Public Interest — {kw}")
         plt.tight_layout()
         fname = FIG_DIR / f"hype_vs_public_interest_{kw.replace(' ', '_')}.png"
@@ -134,16 +143,23 @@ def main() -> None:
         plt.close()
         print(f"[SAVE] {fname}")
 
-    # (c) Hype vs academic_norm_in_year
+    # (c) Global: Hype vs academic_norm_in_year
     plt.figure(figsize=(6, 4))
-    plt.scatter(dfc["hype_mean"], dfc["academic_norm_in_year"])
-    plt.xlabel("Title hype score (hype_mean)")
-    plt.ylabel("Academic activity in publication year (academic_norm)")
-    plt.title("Paper-level Hype vs Academic Interest in Publication Year")
+    plt.scatter(
+        dfc["hype_mean"],
+        dfc["academic_norm_in_year"],
+        alpha=0.8,
+    )
+    plt.xlabel("Title hype score (mean of annotators)")
+    plt.ylabel("Normalized academic activity in year")
+    plt.title("Hype Score vs Academic Interest in Publication Year")
     plt.tight_layout()
-    plt.savefig(FIG_DIR / "hype_vs_academic_in_year.png", dpi=300)
+    out_main_academic = FIG_DIR / "hype_vs_academic_in_year.png"
+    plt.savefig(out_main_academic, dpi=300)
     plt.close()
-    print(f"[SAVE] {FIG_DIR / 'hype_vs_academic_in_year.png'}")
+    print(f"[SAVE] {out_main_academic}")
+
+
 
         # ---------- 6) Per-buzzword correlations ----------
     print("\n=== Per-buzzword correlations (hype_mean vs public_norm) ===")

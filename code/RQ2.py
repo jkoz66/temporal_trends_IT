@@ -69,12 +69,14 @@ def scatter_grid(df: pd.DataFrame, x_col: str, y_col: str,
     keywords = sorted(df_sorted["keyword"].unique())
     n_keywords = len(keywords)
 
-    n_cols = 3
+    # Use 2 columns so each subplot is wider and easier to read in the PDF
+    n_cols = 2
     n_rows = (n_keywords + n_cols - 1) // n_cols
 
+    # Larger figure size so details survive ACM column scaling
     fig, axes = plt.subplots(
         n_rows, n_cols,
-        figsize=(4 * n_cols, 3.5 * n_rows),
+        figsize=(6 * n_cols, 3 * n_rows),  # e.g., for 10 keywords: 12 x 15 inches
         sharex=False,
         sharey=False
     )
@@ -87,17 +89,19 @@ def scatter_grid(df: pd.DataFrame, x_col: str, y_col: str,
             sub[x_col],
             sub[y_col],
             alpha=0.7,
-            edgecolor="none"
+            edgecolor="none",
+            s=25,  # bigger points so they are visible after shrinking in LaTeX
         )
-        ax.set_title(keyword, fontsize=9)
-        ax.set_xlabel(x_label, fontsize=8)
-        ax.set_ylabel(y_label, fontsize=8)
+        ax.set_title(keyword, fontsize=10)
+        ax.set_xlabel(x_label, fontsize=9)
+        ax.set_ylabel(y_label, fontsize=9)
         ax.grid(True, linestyle=":", alpha=0.5)
 
+    # Hide unused axes (for example if n_keywords is odd)
     for ax in axes[n_keywords:]:
         ax.set_visible(False)
 
-    fig.suptitle(title, y=0.98)
+    fig.suptitle(title, fontsize=12, y=0.98)
     plt.tight_layout(rect=[0, 0, 1, 0.95])
     plt.savefig(out_path, dpi=300, bbox_inches="tight")
     plt.close()
@@ -107,23 +111,26 @@ def scatter_grid(df: pd.DataFrame, x_col: str, y_col: str,
 def dual_axis_grid(df: pd.DataFrame, left_col: str, right_col: str,
                    left_label: str, right_label: str,
                    title: str, out_path: Path) -> None:
+    """
+    Create a grid of dual-axis time-series plots (one per keyword),
+    laid out similarly to the scatter_grid (2 columns, many rows)
+    so that each panel is wide enough to be readable in the PDF.
+    """
     df_sorted = df.sort_values(["keyword", "year"])
     keywords = sorted(df_sorted["keyword"].unique())
     n_keywords = len(keywords)
 
-    n_cols = 3
+    # Match layout style to scatter_grid: 2 columns, more rows
+    n_cols = 2
     n_rows = (n_keywords + n_cols - 1) // n_cols
 
-    fig, axes = plt.subplots(
-        n_rows, n_cols,
-        figsize=(5 * n_cols, 3.5 * n_rows),
-        sharex=True
-    )
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(10, 12))  # Fixed size
     axes = axes.flatten()
 
     for ax, keyword in zip(axes, keywords):
         sub = df_sorted[df_sorted["keyword"] == keyword]
 
+        # Left axis: academic_norm
         ax.plot(
             sub["year"],
             sub[left_col],
@@ -136,6 +143,7 @@ def dual_axis_grid(df: pd.DataFrame, left_col: str, right_col: str,
         ax.set_ylabel(left_label, fontsize=8)
         ax.grid(True, linestyle=":", alpha=0.5)
 
+        # Right axis: public_norm
         ax2 = ax.twinx()
         ax2.plot(
             sub["year"],
@@ -146,10 +154,11 @@ def dual_axis_grid(df: pd.DataFrame, left_col: str, right_col: str,
         )
         ax2.set_ylabel(right_label, fontsize=8)
 
+    # Hide unused axes if n_keywords is odd
     for ax in axes[n_keywords:]:
         ax.set_visible(False)
 
-    fig.suptitle(title, y=0.98)
+    fig.suptitle(title, fontsize=12, y=0.98)
     plt.tight_layout(rect=[0, 0, 1, 0.95])
     plt.savefig(out_path, dpi=300, bbox_inches="tight")
     plt.close()
