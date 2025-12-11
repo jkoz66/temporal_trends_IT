@@ -24,7 +24,7 @@ KEYWORDS = [
 
 N_PER_KEYWORD = 10
 YEAR_MIN, YEAR_MAX = 2015, 2025
-RANDOM_STATE = 42
+RANDOM_STATE = 16
 
 # -----------------------------
 # SAMPLING LOGIC

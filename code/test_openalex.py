@@ -99,8 +99,10 @@ TERM_ALIASES: Dict[str, str] = {
     "ar": "augmented reality",
 }
 
-# Output dirs
-OUTDIR = pathlib.Path("data_openalex")
+# Output dirs (absolute to project root)
+BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
+OUTDIR = BASE_DIR / "data" / "data_openalex"
+
 RAW_DIR = OUTDIR / "raw"
 PROCESSED_DIR = OUTDIR / "processed"
 TIMESERIES_DIR = OUTDIR / "timeseries"
@@ -110,6 +112,7 @@ RAW_DIR.mkdir(parents=True, exist_ok=True)
 PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 TIMESERIES_DIR.mkdir(parents=True, exist_ok=True)
 ANNOTATION_DIR.mkdir(parents=True, exist_ok=True)
+
 
 # =========================
 # OpenAlex client
@@ -158,20 +161,17 @@ class OpenAlexClient:
         cursor = "*"
         yielded = 0
 
-        # Build filter string: date range + any extras
+        # Build filter string: exact date range + any extras
         filt = {
-            # option A (publication year range — lighter & simple):
-            "publication_year": f"{from_year}-{to_year}",
-            # option B (exact dates — uncomment if you prefer day precision):
-            # "from_publication_date": f"{from_year}-01-01",
-            # "to_publication_date": f"{to_year}-12-31",
+            "from_publication_date": f"{from_year}-01-01",
+            "to_publication_date": f"{to_year}-12-31",
         }
         if filters:
             filt.update(filters)
 
         params = {
-            "search": query,                 # or use 'q' if you prefer
-            "per_page": 200,                 # 'per-page' also works
+            "search": query,
+            "per_page": 200,
             "cursor": cursor,
             "mailto": self.mailto,
             "filter": ",".join(f"{k}:{v}" for k, v in filt.items()),
@@ -186,11 +186,14 @@ class OpenAlexClient:
                 yielded += 1
                 if max_records is not None and yielded >= max_records:
                     return  # stop early
+
             next_cursor = data.get("meta", {}).get("next_cursor")
             if not next_cursor:
                 break
+
             params["cursor"] = next_cursor
             time.sleep(self.rate_sleep)
+
 
 
 # =========================
@@ -293,8 +296,18 @@ def deduplicate_works(records: List[Dict]) -> pd.DataFrame:
     if "id" in df.columns:
         df = df.drop_duplicates(subset=["id"])
     # Keep only what we need for time series
-    keep_cols = [c for c in ["id", "title", "publication_year", "cited_by_count"] if c in df.columns]
+    keep_cols = [
+        c for c in [
+            "id",
+            "title",
+            "publication_year",
+            "publication_date",   # <-- keep full date!
+            "cited_by_count",
+        ]
+        if c in df.columns
+    ]
     return df[keep_cols]
+
 
 def sample_titles_for_annotation(df: pd.DataFrame, keyword: str, n: int = 10) -> pd.DataFrame:
     """
@@ -335,6 +348,50 @@ def aggregate_yearly_counts(df: pd.DataFrame, keyword: str) -> pd.DataFrame:
     ts["count"] = ts["count"].astype(int)
     return ts[["keyword", "publication_year", "count"]]
 
+def aggregate_monthly_counts(df: pd.DataFrame, keyword: str) -> pd.DataFrame:
+    """
+    Aggregate OpenAlex works to monthly counts for a keyword.
+    Output: keyword, month (timestamp at month start), count
+    """
+    df = df.copy()
+
+    # Use publication_date if available; otherwise fall back to year
+    if "publication_date" in df.columns and df["publication_date"].notna().any():
+        df["pub_date"] = pd.to_datetime(df["publication_date"], errors="coerce")
+    else:
+        # fallback: use June 1st of publication_year as an approximate date
+        df["pub_date"] = pd.to_datetime(
+            df["publication_year"].astype(str) + "-06-01",
+            errors="coerce",
+        )
+
+    df = df.dropna(subset=["pub_date"])
+
+    # Get month start for each record
+    df["month"] = df["pub_date"].dt.to_period("M").dt.to_timestamp("M")  # month end
+    # If you prefer month start, use: .dt.to_timestamp("MS")
+
+    ts = (
+        df.groupby("month")
+          .size()
+          .rename("count")
+          .reset_index()
+    )
+    ts["keyword"] = canonical_term(keyword)
+
+    # Build a complete monthly index from YEAR_START to YEAR_END
+    full_months = pd.date_range(
+        start=f"{YEAR_START}-01-01",
+        end=f"{YEAR_END}-12-31",
+        freq="M",  # month end; use "MS" for month start
+    )
+    full = pd.DataFrame({"month": full_months})
+    ts = full.merge(ts, on="month", how="left").fillna({"count": 0})
+    ts["count"] = ts["count"].astype(int)
+
+    return ts[["keyword", "month", "count"]]
+
+
 def normalize_timeseries(ts: pd.DataFrame) -> pd.DataFrame:
     max_count = ts["count"].max()
     if max_count > 0:
@@ -348,6 +405,13 @@ def save_timeseries(ts: pd.DataFrame, keyword: str) -> pathlib.Path:
     ts.to_csv(out, index=False)
     print(f"[{keyword}] time series -> {out}")
     return out
+
+def save_monthly_timeseries(ts: pd.DataFrame, keyword: str) -> pathlib.Path:
+    out = TIMESERIES_DIR / f"{canonical_term(keyword).replace(' ', '_')}_timeseries_monthly.csv"
+    ts.to_csv(out, index=False)
+    print(f"[{keyword}] monthly time series -> {out}")
+    return out
+
 
 
 # =========================
@@ -384,6 +448,10 @@ def run_pipeline(
         ts = normalize_timeseries(ts)
         save_timeseries(ts, kw)
         all_ts.append(ts)
+
+        # ----- NEW: monthly aggregation -----
+        ts_month = aggregate_monthly_counts(df, kw)
+        save_monthly_timeseries(ts_month, kw)
 
     # Combined CSV for quick plotting later
     combined = pd.concat(all_ts, ignore_index=True)

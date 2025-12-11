@@ -97,8 +97,8 @@ if __name__ == "__main__":
     print("\nYearly data (head):")
     print(wiki_yearly.head())
 
-    wiki_monthly.to_csv("wiki_pageviews_monthly.csv", index=False)
-    wiki_yearly.to_csv("wiki_pageviews_yearly.csv", index=False)
+    wiki_monthly.to_csv("data/data_wiki/wiki_pageviews_monthly.csv", index=False)
+    wiki_yearly.to_csv("data/data_wiki/wiki_pageviews_yearly.csv", index=False)
 
     print("\nSaved:")
     print(" - wiki_pageviews_monthly.csv")
@@ -138,8 +138,7 @@ for buzz in wiki_monthly["buzzword"].unique():
     plt.xticks(rotation=45)
 
     plt.tight_layout()
-    plt.savefig(f"wiki_trend_monthly_{buzz.replace(' ', '_')}.png", dpi=150)
-
+    plt.savefig(f"figures/wiki_trend_monthly_{buzz.replace(' ', '_')}.png", dpi=150)
 
 
 plt.show()

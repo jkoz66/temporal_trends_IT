@@ -3,19 +3,20 @@
 Merge academic (OpenAlex), Wikipedia, and Google Trends time series
 into a single master file per buzzword-year.
 
-Input (default paths, adjust as needed):
+Inputs (your current layout):
 
     data_openalex/timeseries/all_keywords_timeseries.csv
-        - from openalex_buzzwords.py run_pipeline()
-        - expected columns: keyword, year, count, normalized_count
+        - from OpenAlex pipeline
+        - columns: keyword, year, count, normalized_count
 
-    data_openalex/timeseries/wiki_timeseries_all_keywords.csv
-        - your preprocessed Wikipedia time series
-        - must have at least: keyword, year, (some value column)
+    data_wiki/wiki_pageviews_yearly.csv
+        - yearly Wikipedia pageviews per buzzword
+        - we normalize this here to get wiki_norm (0–1 per buzzword)
 
-    data_openalex/timeseries/google_trends_timeseries_all_keywords.csv
-        - your preprocessed Google Trends time series
-        - must have at least: keyword, year, (some value column)
+    data_trends/data_trends_yearly_long.csv
+        - yearly Google Trends interest per buzzword
+        - columns: buzzword, year, interest (0–100)
+        - we normalize this here to get gtrends_norm (0–1 per buzzword)
 
 Output:
 
@@ -32,51 +33,56 @@ Output:
 from pathlib import Path
 from typing import Optional
 
+import numpy as np
 import pandas as pd
 
 
+
 # ---------------------------------------------------------------------
-# Paths – adjust these two for your actual Wiki / Trends filenames
+# Paths – adapted to your directory structure
 # ---------------------------------------------------------------------
 
-OUTDIR = Path("data_openalex")
-TIMESERIES_DIR = OUTDIR / "timeseries"
+OPENALEX_TS = Path("data/data_openalex") / "timeseries" / "all_keywords_timeseries.csv"
+WIKI_TS     = Path("data/data_wiki")     / "wiki_pageviews_yearly.csv"
+GTRENDS_TS  = Path("data/data_trends")   / "data_trends_yearly_long.csv"
 
-OPENALEX_TS = TIMESERIES_DIR / "all_keywords_timeseries.csv"
-
-# 🔧 TODO: change these to your actual filenames
-WIKI_TS = TIMESERIES_DIR / "wiki_timeseries_all_keywords.csv"
-GTRENDS_TS = TIMESERIES_DIR / "google_trends_timeseries_all_keywords.csv"
-
-MASTER_OUT = TIMESERIES_DIR / "buzzword_timeseries_master.csv"
+MASTER_OUT  = Path("data") / "buzzword_timeseries_master.csv"
 
 
 # ---------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------
 
+def _infer_value_column(df: pd.DataFrame, preferred_names: list[str]) -> str:
+    """Pick the first existing column from preferred_names, or a numeric fallback."""
+    for name in preferred_names:
+        if name in df.columns:
+            return name
+
+    candidates = [
+        c for c in df.columns
+        if c not in {"keyword", "buzzword", "year", "source"}
+        and pd.api.types.is_numeric_dtype(df[c])
+    ]
+    if not candidates:
+        raise ValueError(f"Could not infer value column from columns: {list(df.columns)}")
+    return candidates[0]
+
+
 def load_openalex_ts(path: Path) -> pd.DataFrame:
     """Load OpenAlex time series, standardize column names."""
-
     if not path.exists():
         raise SystemExit(f"OpenAlex timeseries file not found: {path}")
 
     df = pd.read_csv(path)
 
-    # Expect something like: keyword, year, count, normalized_count
-    # Normalize column names
-    # Try some common variants in case the CSV is slightly different.
+    # Normalize names: expect keyword, year, count, normalized_count
     rename_map = {}
-
-    # keyword
     if "keyword" not in df.columns:
-        # try some alternatives (can extend if needed)
         for alt in ["term", "buzzword"]:
             if alt in df.columns:
                 rename_map[alt] = "keyword"
                 break
-
-    # year
     if "year" not in df.columns:
         for alt in ["publication_year", "year_int"]:
             if alt in df.columns:
@@ -84,6 +90,9 @@ def load_openalex_ts(path: Path) -> pd.DataFrame:
                 break
 
     df = df.rename(columns=rename_map)
+
+    # 🔹 Canonicalize here as well
+    df["keyword"] = df["keyword"].str.strip().str.lower()
 
     required = {"keyword", "year"}
     if not required.issubset(df.columns):
@@ -94,115 +103,98 @@ def load_openalex_ts(path: Path) -> pd.DataFrame:
     # academic count
     if "count" in df.columns:
         df = df.rename(columns={"count": "academic_count"})
-    else:
-        # if no 'count', we just set a dummy; the normalized column is more important.
-        if "academic_count" not in df.columns:
-            df["academic_count"] = pd.NA
+    elif "academic_count" not in df.columns:
+        df["academic_count"] = pd.NA
 
     # academic normalized
     if "normalized_count" in df.columns:
         df = df.rename(columns={"normalized_count": "academic_norm"})
     elif "academic_norm" not in df.columns:
-        # fall back to any number-like column if needed
         numeric_cols = [c for c in df.columns if c not in {"keyword", "year"}]
         if numeric_cols:
             df = df.rename(columns={numeric_cols[0]: "academic_norm"})
         else:
             raise ValueError("Could not find academic normalized column in OpenAlex TS.")
 
-    # Ensure dtypes
     df["year"] = pd.to_numeric(df["year"], errors="coerce").astype("Int64")
     df["academic_norm"] = pd.to_numeric(df["academic_norm"], errors="coerce")
 
     return df[["keyword", "year", "academic_count", "academic_norm"]]
 
 
-def _infer_value_column(df: pd.DataFrame, preferred_names: list[str]) -> str:
-    """Pick the first existing column from preferred_names, or a numeric fallback."""
-    for name in preferred_names:
-        if name in df.columns:
-            return name
-
-    # fallback: any numeric column that isn't keyword/year/source
-    candidates = [
-        c for c in df.columns
-        if c not in {"keyword", "year", "source"} and pd.api.types.is_numeric_dtype(df[c])
-    ]
-    if not candidates:
-        raise ValueError(f"Could not infer value column from columns: {list(df.columns)}")
-    return candidates[0]
-
-
 def load_wiki_ts(path: Path) -> Optional[pd.DataFrame]:
-    """Load Wikipedia time series, return None if file missing."""
+    """Load Wikipedia pageviews, keep wiki_raw and compute wiki_norm per keyword."""
     if not path.exists():
         print(f"[WARN] Wikipedia timeseries file not found, skipping: {path}")
         return None
 
     df = pd.read_csv(path)
 
-    # Standardize
-    rename_map = {}
-    if "keyword" not in df.columns:
-        for alt in ["term", "buzzword"]:
-            if alt in df.columns:
-                rename_map[alt] = "keyword"
-                break
-    if "year" not in df.columns:
-        for alt in ["year_int"]:
-            if alt in df.columns:
-                rename_map[alt] = "year"
-                break
+    # 1) Standardize name of keyword column
+    if "keyword" not in df.columns and "buzzword" in df.columns:
+        df = df.rename(columns={"buzzword": "keyword"})
 
-    df = df.rename(columns=rename_map)
-    if not {"keyword", "year"}.issubset(df.columns):
-        raise ValueError(f"Wikipedia TS must have keyword & year (got {list(df.columns)})")
+    # 🔹 Make wiki keywords canonical: strip + lowercase
+    df["keyword"] = df["keyword"].str.strip().str.lower()
 
-    value_col = _infer_value_column(
-        df,
-        preferred_names=["normalized_count", "normalized_views", "wiki_norm", "value"],
-    )
+    # 2) Make sure we have a clean integer year column
+    #    If your file already has 'year' as 2015, 2016, ... this is enough.
+    #    If it has a date column instead (like '2015-01-01'), change this to slice:
+    #    df["year"] = df["date"].astype(str).str[:4]
+    df["year"] = pd.to_numeric(df["year"], errors="coerce")
 
-    df["year"] = pd.to_numeric(df["year"], errors="coerce").astype("Int64")
-    df[value_col] = pd.to_numeric(df[value_col], errors="coerce")
+    # Drop rows where year couldn't be parsed
+    df = df.dropna(subset=["year"])
+    df["year"] = df["year"].astype("Int64")
 
-    df = df.rename(columns={value_col: "wiki_norm"})
-    return df[["keyword", "year", "wiki_norm"]]
+    # 3) Make sure we have raw pageviews
+    #    Adjust 'pageviews' to the actual column name in wiki_pageviews_yearly.csv
+    df["wiki_raw"] = pd.to_numeric(df["views"], errors="coerce")
+
+    # 4) Normalize per keyword -> wiki_norm in [0, 1]
+    def _norm(x: pd.Series) -> pd.Series:
+        max_val = x.max()
+        if pd.isna(max_val) or max_val == 0:
+            return 0.0
+        return x / max_val
+
+    df["wiki_norm"] = df.groupby("keyword")["wiki_raw"].transform(_norm)
+
+    return df[["keyword", "year", "wiki_raw", "wiki_norm"]]
 
 
 def load_gtrends_ts(path: Path) -> Optional[pd.DataFrame]:
-    """Load Google Trends time series, return None if file missing."""
+    """Load Google Trends yearly interest, normalize to gtrends_norm 0–1 per keyword."""
     if not path.exists():
         print(f"[WARN] Google Trends timeseries file not found, skipping: {path}")
         return None
 
     df = pd.read_csv(path)
 
+    # Your file: buzzword, year, interest (0–100)
     rename_map = {}
-    if "keyword" not in df.columns:
-        for alt in ["term", "buzzword"]:
-            if alt in df.columns:
-                rename_map[alt] = "keyword"
-                break
-    if "year" not in df.columns:
-        for alt in ["year_int"]:
-            if alt in df.columns:
-                rename_map[alt] = "year"
-                break
+    if "keyword" not in df.columns and "buzzword" in df.columns:
+        rename_map["buzzword"] = "keyword"
 
     df = df.rename(columns=rename_map)
-    if not {"keyword", "year"}.issubset(df.columns):
-        raise ValueError(f"Google Trends TS must have keyword & year (got {list(df.columns)})")
 
-    value_col = _infer_value_column(
-        df,
-        preferred_names=["normalized_count", "normalized_interest", "gtrends_norm", "value"],
-    )
+    if not {"keyword", "year", "interest"}.issubset(df.columns):
+        raise ValueError(
+            f"Expected columns keyword/buzzword, year, interest in Trends TS (got {list(df.columns)})"
+        )
 
     df["year"] = pd.to_numeric(df["year"], errors="coerce").astype("Int64")
-    df[value_col] = pd.to_numeric(df[value_col], errors="coerce")
+    df["interest"] = pd.to_numeric(df["interest"], errors="coerce")
 
-    df = df.rename(columns={value_col: "gtrends_norm"})
+    # Normalize 0–1 per keyword (in case it's not exactly 0–100 or to be safe)
+    def _norm(x: pd.Series) -> pd.Series:
+        max_val = x.max()
+        if max_val in (0, None) or pd.isna(max_val):
+            return 0.0
+        return x / max_val
+
+    df["gtrends_norm"] = df.groupby("keyword")["interest"].transform(_norm)
+
     return df[["keyword", "year", "gtrends_norm"]]
 
 
@@ -211,7 +203,7 @@ def load_gtrends_ts(path: Path) -> Optional[pd.DataFrame]:
 # ---------------------------------------------------------------------
 
 def main() -> None:
-    TIMESERIES_DIR.mkdir(parents=True, exist_ok=True)
+    MASTER_OUT.parent.mkdir(parents=True, exist_ok=True)
 
     print(f"[LOAD] OpenAlex TS: {OPENALEX_TS}")
     df_ac = load_openalex_ts(OPENALEX_TS)
@@ -234,14 +226,14 @@ def main() -> None:
         df = df.merge(df_gt, on=["keyword", "year"], how="left")
         print(f"[MERGE] + Google Trends -> rows: {len(df)}")
 
-    # Optional: sort for neatness
+    # ----- Combined public interest index -----
+    df["public_norm"] = (df["wiki_norm"].fillna(0) + df["gtrends_norm"].fillna(0)) / 2
+
     df = df.sort_values(["keyword", "year"]).reset_index(drop=True)
 
-    MASTER_OUT.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(MASTER_OUT, index=False)
     print(f"[SAVE] master buzzword timeseries -> {MASTER_OUT}")
 
-    # Small sanity print
     print("\n[HEAD] master timeseries:")
     print(df.head())
 
