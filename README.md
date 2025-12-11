@@ -48,7 +48,7 @@ OpenAlex:
     python code/test_openalex.py
 
 Google Trends:
-    python code/test_trends.py
+    python code/google_trends_download_and_normalize.py
 
 Wikipedia:
     python code/wikipedia.py
