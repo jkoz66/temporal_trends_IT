@@ -70,35 +70,38 @@ def plot_rq1_small_multiples(df: pd.DataFrame, out_path: Path) -> None:
     keywords = sorted(df_sorted["keyword"].unique())
     n_keywords = len(keywords)
 
-    # decide grid size
-    n_cols = 3
+    # Match RQ2 layout: 2 columns, many rows
+    n_cols = 2
     n_rows = (n_keywords + n_cols - 1) // n_cols
 
-    fig, axes = plt.subplots(
-        n_rows,
-        n_cols,
-        figsize=(4 * n_cols, 3 * n_rows),
-        sharex=True,
-        sharey=True,
-    )
+    # Match RQ2 figsize style: wide, readable in ACM PDF
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(10, 12))
     axes = axes.flatten()
 
     for ax, keyword in zip(axes, keywords):
         sub = df_sorted[df_sorted["keyword"] == keyword]
-        ax.plot(sub["year"], sub["academic_norm_plot"], marker="o", linestyle="-")
-        ax.set_title(keyword, fontsize=9)
+
+        ax.plot(
+            sub["year"],
+            sub["academic_norm_plot"],
+            marker="o",
+            linestyle="-",
+            linewidth=1.2
+        )
+        ax.set_title(keyword, fontsize=10)
         ax.grid(True, linestyle=":", alpha=0.5)
 
-    # hide any leftover empty axes
+        ax.set_xlabel("Year", fontsize=9)
+        ax.set_ylabel("Normalized academic\nattention", fontsize=9)
+
+    # Hide unused axes if count is odd
     for ax in axes[n_keywords:]:
         ax.set_visible(False)
 
-    fig.suptitle("Academic hype cycles by keyword", y=0.98)
-    fig.text(0.5, 0.04, "Year", ha="center")
-    fig.text(0.04, 0.5, "Normalized academic attention", va="center", rotation="vertical")
+    fig.suptitle("Academic hype cycles by keyword", fontsize=12, y=0.98)
 
-    plt.tight_layout(rect=[0.06, 0.06, 1, 0.95])
-    plt.savefig(out_path, dpi=300, bbox_inches="tight")
+    plt.tight_layout(rect=[0, 0, 1, 0.95])
+    fig.savefig(out_path, dpi=300, bbox_inches="tight")
     plt.close()
     print(f"Saved small-multiples RQ1 plot to: {out_path}")
 
