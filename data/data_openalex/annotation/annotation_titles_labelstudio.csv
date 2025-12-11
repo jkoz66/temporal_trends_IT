@@ -1,101 +1,101 @@
 id,keyword,text,publication_year
-https://openalex.org/W2809548109,big data,Construction Low Complexity and Low Delay CDS for Big Data Code Dissemination,2018
+https://openalex.org/W3167377198,big data,Understanding interorganizational big data technologies: How technology adoption motivations and technology design shape collaborative dynamics,2021
 https://openalex.org/W4243900647,big data,Proceedings of the 2020 5th International Conference on Big Data and Computing,2020
-https://openalex.org/W2613379088,big data,Evolutionary feature manipulation in data mining/big data,2017
-https://openalex.org/W2901513145,big data,HOLMeS: eHealth in the Big Data and Deep Learning Era,2019
+https://openalex.org/W2746031786,big data,Achieving privacy-preserving big data aggregation with fault tolerance in smart grid,2017
+https://openalex.org/W2082671441,big data,Processing and Analytics of Big Data Streams with Yahoo!S4,2015
 https://openalex.org/W2958383738,big data,Big Data Analysis for Sustainable Agriculture on a Geospatial Cloud Framework,2019
-https://openalex.org/W3101415116,big data,"Big data analytics in telecommunications: Governance, architecture and use cases",2020
-https://openalex.org/W2785511006,big data,FML-kNN: scalable machine learning on Big Data using k-nearest neighbor joins,2018
-https://openalex.org/W2935794055,big data,"Data science, big data and statistics",2019
-https://openalex.org/W745336404,big data,Lowering Data Dimensionality in Big Data for the Benefit of Precision Agriculture,2015
-https://openalex.org/W2564530605,big data,BIG DATA IN CIVIL ENGINEERING: A STATE-OF-THE-ART SURVEY,2016
-https://openalex.org/W4404681703,quantum computing,Research on Quantum Computing Acceleration of Support Vector Machines in Multi-dimensional Nonlinear Feature Spaces,2024
-https://openalex.org/W3035550282,quantum computing,Quantum Computing,2020
+https://openalex.org/W3013019408,big data,"Human Resource Management in the Digital Age: Big Data, HR Analytics and Artificial Intelligence",2018
+https://openalex.org/W2729480800,big data,Theory and method of granular computing for big data mining,2015
+https://openalex.org/W2085500298,big data,Big Data for Open Digital Innovation – A Research Roadmap,2015
+https://openalex.org/W3082562609,big data,Big data analysis techniques to address polypharmacy in patients – a scoping review,2020
+https://openalex.org/W3020075602,big data,Investigating Big Data Analytics Readiness in Higher Education Using the Technology-Organisation-Environment (TOE) Framework,2019
+https://openalex.org/W2611050590,quantum computing,Towards understanding two-level-systems in amorphous solids: insights from quantum circuits,2019
+https://openalex.org/W4400918165,quantum computing,PROGRESS AND PROSPECTS IN THE FIELD OF QUANTUM COMPUTING,2024
 https://openalex.org/W3127460597,quantum computing,Quantum computing hardware in the cloud: Should a computational chemist care?,2021
-https://openalex.org/W2940301677,quantum computing,Fast variational quantum algorithms for training neural networks and solving convex optimizations,2019
-https://openalex.org/W4407897513,quantum computing,Quantum Computing in Transportation Engineering: A Survey,2025
-https://openalex.org/W4400668424,quantum computing,Experimental Verifiable Multiclient Blind Quantum Computing on a Qline Architecture,2025
-https://openalex.org/W4385237820,quantum computing,Performance Study of Variational Quantum Algorithms for Solving the Poisson Equation on a Quantum Computer,2023
+https://openalex.org/W4293195266,quantum computing,Fundamentals of Quantum Entanglement (Second Edition),2022
+https://openalex.org/W2914146742,quantum computing,Poor man's topological quantum gate based on the Su-Schrieffer-Heeger model,2019
+https://openalex.org/W4285014446,quantum computing,Error-Tolerant Mapping for Quantum Computing,2022
+https://openalex.org/W4400018352,quantum computing,A Review on High-Frequency Trading Forecasting Methods: Opportunity and Challenges for Quantum Based Method,2024
 https://openalex.org/W4399671714,quantum computing,Towards Adiabatic Quantum Computing Using Compressed Quantum Circuits,2024
-https://openalex.org/W1989275457,quantum computing,Newton Methods for the Optimal Control of Closed Quantum Spin Systems,2015
-https://openalex.org/W2607825851,quantum computing,Local optical control of ferromagnetism and chemical potential in a topological insulator,2017
-https://openalex.org/W4312225684,artificial general intelligence,On Realization of Intelligent Decision-Making in the Real World: A Foundation Decision Model Perspective,2022
+https://openalex.org/W4297875326,quantum computing,Quantum Computing,2022
+https://openalex.org/W3036744022,quantum computing,Nonadiabatic Molecular Quantum Dynamics with Quantum Computers,2020
+https://openalex.org/W4403210258,artificial general intelligence,A Systematic Review of Recent Literature on Data Governance (2017–2023),2024
 https://openalex.org/W7105847531,artificial general intelligence,The Pantheon Architecture: A Verifiable Foundation for Artificial General Intelligence.,2025
 https://openalex.org/W4285581252,artificial general intelligence,Constructivism and its risks in artificial intelligence,2020
-https://openalex.org/W4390916058,artificial general intelligence,"Impact of artificial intelligence on the diagnosis, treatment and prognosis of endometrial cancer",2024
-https://openalex.org/W4394708737,artificial general intelligence,A Survey on Responsible Generative AI: What to Generate and What Not,2024
-https://openalex.org/W3184078521,artificial general intelligence,A Review on Representative Swarm Intelligence Algorithms for Solving Optimization Problems: Applications and Trends,2021
+https://openalex.org/W3135825876,artificial general intelligence,"Generalized photogrammetry of spaceborne, airborne and terrestrial multi-source remote sensing datasets",2021
+https://openalex.org/W4386631233,artificial general intelligence,A Framework for User-Centric Visualisation of Blockchain Transactions in Critical Infrastructure,2023
+https://openalex.org/W4400247338,artificial general intelligence,The Use of Artificial Intelligence Chatbots in Teaching Foreign Languages as an Innovative Interactive Technology,2024
 https://openalex.org/W4394966885,artificial general intelligence,Vision-Language Models in Remote Sensing: Current progress and future trends,2024
 https://openalex.org/W4226321958,artificial general intelligence,Long term cost-effectiveness of resilient foods for global catastrophes compared to artificial general intelligence safety,2022
-https://openalex.org/W3124459244,artificial general intelligence,General Environment Description Language,2021
+https://openalex.org/W4393550899,artificial general intelligence,Ozame/agi-industry: v1.0.1,2021
 https://openalex.org/W4386811374,artificial general intelligence,Digital Marketing and Sustainability in the Era of Climate Change: PLS-Structural Equation Modeling Approach,2023
-https://openalex.org/W4285818136,blockchain,"Fusion of IoT, AI, Edge–Fog–Cloud, and Blockchain: Challenges, Solutions, and a Case Study in Healthcare and Medicine",2022
-https://openalex.org/W3134356917,blockchain,Blockchain Traceability in Healthcare: Blood Donation Supply Chain,2021
-https://openalex.org/W3082441216,blockchain,A blockchain-based scheme for privacy-preserving and secure sharing of medical data,2020
-https://openalex.org/W4395466407,blockchain,Blockchain-enabled infrastructural security solution for serverless consortium fog and edge computing.,2024
-https://openalex.org/W2799581224,blockchain,Root Exploit Detection and Features Optimization: Mobile Device and Blockchain Based Medical Data Management,2018
-https://openalex.org/W4311625327,blockchain,Blockchain acceptance rate prediction in the resilient supply chain with hybrid system dynamics and machine learning approach,2022
-https://openalex.org/W3129625143,blockchain,"Blockchain in supply chain management: a review, bibliometric, and network analysis",2021
-https://openalex.org/W3116280547,blockchain,"Blockchain Technology: Methodology, Application and Security Issues",2020
-https://openalex.org/W4321770423,blockchain,An Effective Privacy-Preserving Blockchain-Assisted Security Protocol for Cloud-Based Digital Twin Environment,2023
+https://openalex.org/W4248820813,blockchain,Blockchain of Things (BCoT): The Fusion of Blockchain and IoT Technologies,2019
+https://openalex.org/W3024554844,blockchain,An Autonomous Lane-Changing System With Knowledge Accumulation and Transfer Assisted by Vehicular Blockchain,2020
+https://openalex.org/W4379058319,blockchain,NFT luxury brand marketing in the metaverse: Leveraging blockchain‐certified NFTs to drive consumer behavior,2023
+https://openalex.org/W3000466679,blockchain,Architecture to manage Internet of Things Data using Blockchain and Fog Computing,2019
+https://openalex.org/W3033073138,blockchain,Blockchain Technology: Challenges and Security issues in Consensus algorithm,2020
+https://openalex.org/W4366957204,blockchain,B-HAS: Blockchain-Assisted Efficient Handover Authentication and Secure Communication Protocol in VANETs,2023
+https://openalex.org/W2914492849,blockchain,Blockchain and IoT-Based Cognitive Edge Framework for Sharing Economy Services in a Smart City,2019
+https://openalex.org/W2962728684,blockchain,Design of Recruitment Management Platform Using Digital Certificate on Blockchain,2019
+https://openalex.org/W4210331070,blockchain,Enterprise Data Sharing with Privacy-Preserved Based on Hyperledger Fabric Blockchain in IIOT’s Application,2022
 https://openalex.org/W2807998273,blockchain,Blockchain and the Internet of Things in the Industrial Sector,2018
-https://openalex.org/W3000128837,cryptocurrency,"Algorithms, Blockchain &amp; Cryptocurrency: Implications for the Future of the Workplace",2020
-https://openalex.org/W2997986267,cryptocurrency,Cryptocurrencies and Risk Mitigation,2019
-https://openalex.org/W2911666237,cryptocurrency,Private and Public Law Implications of Cryptocurrencies,2019
+https://openalex.org/W4396867418,cryptocurrency,Understanding the Dynamics and Interconnectedness of Cryptocurrency and Stock Markets: A Survey,2024
+https://openalex.org/W2948817512,cryptocurrency,The Impact of Regulation and Transparency in the Cryptocurrency Market,2019
+https://openalex.org/W2926987861,cryptocurrency,A Survey of Distributed Consensus Protocols for Blockchain Networks,2020
 https://openalex.org/W4324142805,cryptocurrency,"Review of: ""Cryptocurrency market risk analysis: evidence from FZL function""",2023
-https://openalex.org/W4395019915,cryptocurrency,A REVIEW OF MONETARY DETERMINANTS OF CRYPTOCURRENCY ADOPTION IN ISLAMIC FINANCIAL SYSTEM,2022
-https://openalex.org/W4400377464,cryptocurrency,Regulating Cryptocurrency and Decentralized Finance for an Inclusive Economy,2024
-https://openalex.org/W4411011582,cryptocurrency,Cryptocurrency time series on the Binary Complexity-Entropy Plane: Ranking efficiency from the perspective of complex systems,2025
-https://openalex.org/W2977997289,cryptocurrency,"Can Bitcoin, and other cryptocurrencies, be modeled effectively with a Markov-Switching approach?",2019
-https://openalex.org/W4385490789,cryptocurrency,Risk in the cryptocurrency markets: the role of structural breaks and fat-tailed distributions in estimating value-at-risk and expected shortfall,2023
+https://openalex.org/W4289325047,cryptocurrency,Identification of the Variables Effecting the Value of the Cryptocurrency,2021
+https://openalex.org/W3124061092,cryptocurrency,A Machine Learning Based Regulatory Risk Index for Cryptocurrencies,2020
+https://openalex.org/W4402338166,cryptocurrency,Learning extreme expected shortfall and conditional tail moments with neural networks. Application to cryptocurrency data,2024
+https://openalex.org/W3141718340,cryptocurrency,Cryptocurrency Market Analysis: Realities and Prospects,2021
+https://openalex.org/W4226378001,cryptocurrency,The Economics of Cryptocurrencies in a General Equilibrium Framework,2022
 https://openalex.org/W2900717462,cryptocurrency,An analysis of cryptocurrencies conditional cross correlations,2019
-https://openalex.org/W4285110533,metaverse,Improving Emotional Intelligence in the New Normal Using Metaverse Applications for Digital Native,2022
-https://openalex.org/W4391567037,metaverse,"Implications of metaverse, virtual reality, and extended reality for development and learning in organizations",2024
-https://openalex.org/W4403304547,metaverse,Digitally gamified co-creation: enhancing community engagement in urban design through a participant-centric framework,2024
-https://openalex.org/W4393716596,metaverse,Metaverse in the 6G Era,2024
-https://openalex.org/W4399052192,metaverse,Navigating the Digital Dimensions of the Metaverse: A Systematic Review and Research Agenda Exploring Implications Across Industries and Customers,2024
+https://openalex.org/W4390612819,metaverse,"Revolutionizing Healthcare—The Integration of Virtual Worlds, AR, and Metaverse Technology",2024
+https://openalex.org/W4387412953,metaverse,Grid-Metaverse: The Path From Digital Twins and Prototype Tests on DC Microgrids,2023
+https://openalex.org/W4388398586,metaverse,A Study on Metaverse Model Construction for Safety Management Digital Transformation,2023
+https://openalex.org/W4405994809,metaverse,The Role of Artificial Intelligence in Enhancing Design Innovation and Sustainability,2024
+https://openalex.org/W4319779385,metaverse,Metamorphosis towards Metaverse Banking,2023
 https://openalex.org/W4229066162,metaverse,Web 3.0 and the Metaverse Shaping Organizations’ Brand and Product Strategies,2022
-https://openalex.org/W4388180850,metaverse,"COMPETITIVE ANALYSIS OF THE METAVERSE MARKET: FEATURES, OPPORTUNITIES AND DEVELOPMENT STRATEGIES",2023
-https://openalex.org/W4404642474,metaverse,Promoting students’ real case-handling performance and higher order thinking in virtual contexts: a metaverse-facilitated collaborative learning approach,2024
-https://openalex.org/W4392783886,metaverse,A bibliometric analysis of metaverse technologies in healthcare services,2024
-https://openalex.org/W4309907703,metaverse,ANONİM ŞİRKETLERDE METAVERSE ORTAMINDA GENEL KURUL TOPLANTISI YAPILMASI,2022
-https://openalex.org/W4226280723,edge computing,Temperature Matrix-Based Data Placement Using Improved Hungarian Algorithm in Edge Computing Environments,2022
-https://openalex.org/W3016312248,edge computing,A Deep Reinforcement Learning Approach to Multi-Component Job Scheduling in Edge Computing,2019
+https://openalex.org/W4318499256,metaverse,Analysis of Maintenance Techniques for a Three-Dimensional Digital Twin-Based Railway Facility with Tunnels,2023
+https://openalex.org/W4322152857,metaverse,NLP Applied to Systematic Review: Case Study for the Creation of a Golden Set for the Metaverse,2023
+https://openalex.org/W4321193216,metaverse,Machine Learning for Educational Metaverse: How Far Are We?,2023
+https://openalex.org/W4413014811,metaverse,The medical metaverse in China: Current applications and future prospects,2025
+https://openalex.org/W4288039102,edge computing,Dynamic Offloading Method for Mobile Edge Computing of Internet of Vehicles Based on Multi-Vehicle Users and Multi-MEC Servers,2022
+https://openalex.org/W4387107975,edge computing,An UAV and EV based mobile edge computing system for total delay minimization,2023
 https://openalex.org/W3117755275,edge computing,Distributed and Dynamic Service Placement in Pervasive Edge Computing Networks,2020
 https://openalex.org/W3135497297,edge computing,Survey on Multi-Access Edge Computing Security and Privacy,2021
-https://openalex.org/W2963047569,edge computing,Minimization of Offloading Delay for Two-Tier UAV with Mobile Edge Computing,2019
+https://openalex.org/W3013238231,edge computing,A Hybrid Machine Learning Model for Demand Prediction of Edge-Computing-Based Bike-Sharing System Using Internet of Things,2020
 https://openalex.org/W4391486357,edge computing,Intelligent Cotton Pest and Disease Detection: Edge Computing Solutions with Transformer Technology and Knowledge Graphs,2024
-https://openalex.org/W3197740676,edge computing,Tasks Offloading for Connected Autonomous Vehicles in Edge Computing,2021
+https://openalex.org/W4311051093,edge computing,QoS-Aware Joint Task Scheduling and Resource Allocation in Vehicular Edge Computing,2022
 https://openalex.org/W2974943852,edge computing,Mobility-Aware Delay-Sensitive Service Provisioning for Mobile Edge Computing,2019
 https://openalex.org/W4321488505,edge computing,A Survey on Mobile Edge Computing for Deep Learning,2023
 https://openalex.org/W4327662645,edge computing,Edge-Computing-Facilitated Nighttime Vehicle Detection Investigations With CLAHE-Enhanced Images,2023
-https://openalex.org/W4411937784,generative ai,Sustainable Teaching Model in the Age of Generative AI Technology,2025
-https://openalex.org/W4399075230,generative ai,Computer vision and Generative AI for yield prediction in Digital Agriculture,2024
-https://openalex.org/W4396988273,generative ai,Applications of Generative AI in Fintech,2023
-https://openalex.org/W4411156145,generative ai,Ethical and legal considerations of generative AI,2025
-https://openalex.org/W4400443543,generative ai,Optimized Skin Lesion Segmentation: Analysing DeepLabV3+ and ASSP Against Generative AI-Based Deep Learning Approach,2024
-https://openalex.org/W4407676659,generative ai,Generative AI for Enhanced Decision Making in Healthcare 5.0,2024
-https://openalex.org/W4400345468,generative ai,How to use generative AI more responsibly,2024
-https://openalex.org/W4407950427,generative ai,"Misconceptions, Pragmatism, and Value Tensions: Evaluating Students' Understanding and Perception of Generative AI for Education",2024
-https://openalex.org/W7107964769,generative ai,EA2SysGenAI: A Generative AI for Automated Enterprise System Generation,2025
-https://openalex.org/W4403511307,generative ai,We need to understand “when” not “if” generative AI can enhance personalized persuasion,2024
-https://openalex.org/W4409807117,chatbot,URAG: Implementing a Unified Hybrid RAG for Precise Answers in University Admission Chatbots – A Case Study at HCMUT,2025
-https://openalex.org/W4387168140,chatbot,Artificial intelligence-powered digital solutions in the fashion industry: a mixed-methods study on AI-based customer services,2023
+https://openalex.org/W4389334463,generative ai,Generative AI in Terms of Its Ethical Problems for Both Teachers and Learners,2023
+https://openalex.org/W4416955759,generative ai,Generative AI-Augmented Thematic Analysis,2025
+https://openalex.org/W4394903892,generative ai,Emerging leaders or persistent gaps? Generative AI research may foster women in STEM,2024
+https://openalex.org/W4412470371,generative ai,Developer Perspectives on Licensing and Copyright Issues Arising from Generative AI for Software Development,2025
+https://openalex.org/W4393177724,generative ai,Revolutionising Distance Learning: A Comparative Study of Learning Progress with AI-Driven Tutoring,2024
+https://openalex.org/W4400851800,generative ai,Enhancing Learning and Collaboration in a Unit Operations Course: Using AI as a Catalyst to Create Engaging Problem-Based Learning Scenarios,2024
+https://openalex.org/W4404797741,generative ai,Generative AI in Automotive Development,2024
+https://openalex.org/W4403022161,generative ai,Knowledge Distillation Cross Domain Diffusion Model: A Generative AI Approach for Defect Pattern Segmentation,2024
+https://openalex.org/W4403322120,generative ai,Thematic Analysis with Open-Source Generative AI and Machine Learning: A New Method for Inductive Qualitative Codebook Development,2024
+https://openalex.org/W4414535026,generative ai,Generative AI for Personalized Learning,2025
+https://openalex.org/W3194708518,chatbot,An Interactive Paradigm for the End-User Development of Chatbots for Data Exploration,2021
+https://openalex.org/W4376652806,chatbot,Generative AI: Implications and Applications for Education,2023
 https://openalex.org/W2967726121,chatbot,Hospitality of chatbot building platforms,2019
-https://openalex.org/W3041573757,chatbot,P164 Rewiring Texas WIC: Informing the Development of a Chatbot to Strengthen Enrollment in Texas,2020
-https://openalex.org/W4395109849,chatbot,Accuracy of a chatbot in answering questions that patients should ask before taking a new medication,2024
-https://openalex.org/W3014625307,chatbot,Bio-Inspiring Learning Style Chatbot Inventory Using Brain Computing Interface to Increase the Efficiency of E-Learning,2020
-https://openalex.org/W4408860464,chatbot,Determinants of Attitudes and Adoption Intentions Toward M-Commerce Chatbots,2024
-https://openalex.org/W4380714494,chatbot,Adding guardrails to advanced chatbots,2023
-https://openalex.org/W4386987986,chatbot,EFICÁCIA DA UTILIZAÇÃO DE CHATBOTS NA TRIAGEM DE SINTOMAS DE COVID-19: UMA REVISÃO INTEGRATIVA,2023
-https://openalex.org/W3208865044,chatbot,Perception and Adoption of Customer Service Chatbots among Millennials: An Empirical Validation in the Indian Context,2021
+https://openalex.org/W4411154022,chatbot,Effects of AI chatbots on EFL students’ critical thinking skills and intrinsic motivation in argumentative writing,2025
+https://openalex.org/W3108779686,chatbot,The Study of Framework of Structural Scenarios for Chatbot Docent in Science Centers and Museums,2020
+https://openalex.org/W3164447366,chatbot,Chatbots to Support People With Dementia and Their Caregivers: Systematic Review of Functions and Quality,2021
+https://openalex.org/W4402188906,chatbot,Sentiment Analysis for Therapy Chatbots: A Comparison of Supervised Learning Approaches,2024
+https://openalex.org/W4406233972,chatbot,Customer's Intention to Adopt AI Chatbots in E-Commerce Framework: Using Structural Equation Modeling,2024
+https://openalex.org/W4380291947,chatbot,Proof of Concept: Using ChatGPT to Teach Emergency Physicians How to Break Bad News,2023
+https://openalex.org/W3196895244,chatbot,ROLE OF AI-INDUCED CHATBOT IN ENHANCING CUSTOMER RELATIONSHIP MANAGEMENT IN THE BANKING INDUSTRY,2020
 https://openalex.org/W4206586611,augmented reality,PEMANFAATAN AUGMENTED REALITY UNTUK MELATIH KETERAMPILAN BERPIKIR ABAD 21 DI PEMBELAJARAN IPA,2021
-https://openalex.org/W3158876177,augmented reality,Science Tour and Business Model Using Digital Twin-Based Augmented Reality,2021
+https://openalex.org/W4407073093,augmented reality,Students' Interest in Learning Mathematics Using Augmented Reality: Rasch Model Analysis,2023
 https://openalex.org/W2395857177,augmented reality,A KINECT-BASED AUGMENTED REALITY SYSTEM FOR INDIVIDUALS WITH AUTISM SPECTRUM DISORDERS,2018
-https://openalex.org/W3025306564,augmented reality,Augmented reality worksheets in field trip learning,2020
-https://openalex.org/W4321604889,augmented reality,Is social presence (alone) a general predictor for good remote collaboration? comparing video and augmented reality guidance in maintenance procedures,2023
+https://openalex.org/W2970323030,augmented reality,Improving students’ learning with a mobile augmented reality approach – the EduPARK game,2019
+https://openalex.org/W3209948883,augmented reality,SceneAR: Scene-based Micro Narratives for Sharing and Remixing in Augmented Reality,2021
 https://openalex.org/W3161699818,augmented reality,Augmented reality applications for K-12 education: A systematic review from the usability and user experience perspective,2021
 https://openalex.org/W2789244800,augmented reality,Mobile Educational Augmented Reality Games: A Systematic Literature Review and Two Case Studies,2018
-https://openalex.org/W4399175587,augmented reality,Revolutionizing CNC Lathe Education: Designing Instructional Media Integrated Using Augmented Reality Technology,2024
-https://openalex.org/W4284711473,augmented reality,A Review of Augmented Reality for Informal Science Learning: Supporting Design of Intergenerational Group Learning,2022
+https://openalex.org/W4388232116,augmented reality,Application of Augmented Reality for Furniture Catalogs,2023
+https://openalex.org/W2989947773,augmented reality,"Editorial: Assessing the Therapeutic Uses and Effectiveness of Virtual Reality, Augmented Reality and Video Games for Emotion Regulation and Stress Management",2019
 https://openalex.org/W2954309784,augmented reality,Virtual and Augmented Reality in Education,2019

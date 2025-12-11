@@ -1,23 +1,3 @@
-# openalex_buzzwords.py
-"""
-Skeleton pipeline for 'Temporal Trends of Tech Buzzwords' using OpenAlex.
-
-Flow (per spec):
-1) Query OpenAlex 'works' for each keyword across years (2000–2025).
-2) Save raw results per keyword (JSONL) for reproducibility.
-3) Clean & normalize terms (map synonyms like "deep learning" ~ "deep neural networks").
-4) Aggregate yearly counts to build time series.
-5) (Optional) Tag keywords (method/technology/concept) and cluster into themes.
-
-Run:
-    python openalex_buzzwords.py
-
-Notes:
-- OpenAlex uses cursor-based pagination; max per_page=200.
-- Respect polite usage: include your contact via `mailto` param.
-- This is a skeleton—fill TODOs where indicated.
-"""
-
 from __future__ import annotations
 import os
 import time
@@ -30,19 +10,12 @@ from typing import Dict, Iterable, List, Optional
 import requests
 import pandas as pd
 
-
-# =========================
-# Config
-# =========================
-
-MAILTO = os.environ.get("OPENALEX_MAILTO", "your_email@example.com")  # TODO: set or export env var
+MAILTO = os.environ.get("OPENALEX_MAILTO", "your_email@example.com")
 BASE_URL = "https://api.openalex.org/works"
 
-# Project scope (you can tweak these at runtime)
 YEAR_START = 2015
 YEAR_END   = 2025
 
-# Your picked buzzwords
 KEYWORDS = [
     "big data",
     "quantum computing",
@@ -56,50 +29,39 @@ KEYWORDS = [
     "augmented reality",
 ]
 
-# Map synonyms -> canonical buzzword (normalization)
 TERM_ALIASES: Dict[str, str] = {
-    # Big data
     "big data": "big data",
     "large scale data": "big data",
 
-    # Quantum computing
     "quantum computing": "quantum computing",
     "quantum computer": "quantum computing",
 
-    # Artificial General Intelligence
     "artificial general intelligence": "artificial general intelligence",
     "agi": "artificial general intelligence",
 
-    # Blockchain / crypto
     "blockchain": "blockchain",
     "cryptocurrency": "cryptocurrency",
     "crypto": "cryptocurrency",
     "cryptocurrencies": "cryptocurrency",
 
-    # Metaverse
     "metaverse": "metaverse",
 
-    # Edge computing
     "edge computing": "edge computing",
     "fog computing": "edge computing",
 
-    # Generative AI
     "generative ai": "generative ai",
     "generative models": "generative ai",
     "gpt": "generative ai",
     "stable diffusion": "generative ai",
 
-    # Chatbots
     "chatbot": "chatbot",
     "chat bot": "chatbot",
     "conversational agent": "chatbot",
 
-    # Augmented reality
     "augmented reality": "augmented reality",
     "ar": "augmented reality",
 }
 
-# Output dirs (absolute to project root)
 BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
 OUTDIR = BASE_DIR / "data" / "data_openalex"
 
@@ -114,38 +76,27 @@ TIMESERIES_DIR.mkdir(parents=True, exist_ok=True)
 ANNOTATION_DIR.mkdir(parents=True, exist_ok=True)
 
 
-# =========================
-# OpenAlex client
-# =========================
-
 class OpenAlexClient:
-    """Minimal OpenAlex client for 'works' endpoint with cursor pagination."""
-
     def __init__(self, base_url: str = BASE_URL, mailto: str = MAILTO, rate_sleep: float = 0.2):
         self.base_url = base_url
         self.mailto = mailto
-        self.rate_sleep = rate_sleep  # polite throttle between requests
+        self.rate_sleep = rate_sleep
 
     def _request(self, params: Dict) -> Dict:
-        # Simple GET with retry/backoff
         backoff = 1.0
         for attempt in range(5):
             try:
                 resp = requests.get(self.base_url, params=params, timeout=30)
                 if resp.status_code == 200:
                     return resp.json()
-                # Handle 429/5xx with backoff
                 if resp.status_code in (429, 500, 502, 503, 504):
                     print(resp.json())
                     time.sleep(backoff)
-                    # backoff *= 2
                 else:
                     resp.raise_for_status()
             except requests.RequestException as e:
-                # Network hiccup—backoff and retry
                 print(resp.json())
                 time.sleep(backoff)
-                # backoff *= 2
         raise RuntimeError(f"OpenAlex request failed after retries: params={params}")
 
 
@@ -161,7 +112,6 @@ class OpenAlexClient:
         cursor = "*"
         yielded = 0
 
-        # Build filter string: exact date range + any extras
         filt = {
             "from_publication_date": f"{from_year}-01-01",
             "to_publication_date": f"{to_year}-12-31",
@@ -185,7 +135,7 @@ class OpenAlexClient:
                 yield item
                 yielded += 1
                 if max_records is not None and yielded >= max_records:
-                    return  # stop early
+                    return
 
             next_cursor = data.get("meta", {}).get("next_cursor")
             if not next_cursor:
@@ -195,28 +145,19 @@ class OpenAlexClient:
             time.sleep(self.rate_sleep)
 
 
-
-# =========================
 # Normalization helpers
-# =========================
-
 def canonical_term(term: str) -> str:
-    """Map a term to its canonical buzzword."""
     t = term.strip().lower()
     return TERM_ALIASES.get(t, t)
 
 def contains_term(text: str, term_variants: List[str]) -> bool:
-    """Very simple containment check; improve with NLP later if needed."""
     if not text:
         return False
     low = text.lower()
     return any(v in low for v in term_variants)
 
 
-# =========================
 # Data collection
-# =========================
-
 def fetch_keyword(
     client: OpenAlexClient,
     keyword: str,
@@ -227,30 +168,26 @@ def fetch_keyword(
     save_every_n: int = 1000,
     max_records: int | None = None,
 ) -> pathlib.Path:
-    """
-    Fetch all works for a keyword and save JSONL into data_openalex/raw/keyword.jsonl
-    """
     canonical = canonical_term(keyword)
     raw_path = RAW_DIR / f"{canonical.replace(' ', '_')}.jsonl"
     count = 0
 
-    # Build a simple variant list (canonical + alias keys pointing to canonical)
     variants = {k for k, v in TERM_ALIASES.items() if v == canonical}
     variants.add(canonical)
 
     with raw_path.open("w", encoding="utf-8") as f:
         for work in client.iter_works(
-            query=canonical,  # start with canonical in OpenAlex 'search'
+            query=canonical,
             from_year=year_start,
             to_year=year_end,
             select_fields=select_fields,
             filters=extra_filters,
             max_records=max_records,
         ):
-            # Optional local filter: keep if any variant appears in title or (expanded) abstract
-            title = (work.get("title") or "")  # OpenAlex field is 'title'
+           
+            title = (work.get("title") or "")
             abstract_inv = work.get("abstract_inverted_index") or {}
-            # Reconstruct abstract text if provided as inverted index
+            
             abstract_text = invert_openalex_abstract(abstract_inv)
 
             if contains_term(title, list(variants)) or contains_term(abstract_text, list(variants)):
@@ -264,10 +201,8 @@ def fetch_keyword(
 
 
 def invert_openalex_abstract(inv_idx: Dict[str, List[int]]) -> str:
-    """Convert OpenAlex abstract_inverted_index to plain text."""
     if not inv_idx:
         return ""
-    # Find max position
     max_pos = 0
     for positions in inv_idx.values():
         if positions:
@@ -280,28 +215,21 @@ def invert_openalex_abstract(inv_idx: Dict[str, List[int]]) -> str:
     return " ".join(w for w in words if w)
 
 
-# =========================
 # Processing & aggregation
-# =========================
-
 def load_jsonl(path: pathlib.Path) -> List[Dict]:
     with path.open("r", encoding="utf-8") as f:
         return [json.loads(line) for line in f]
 
 def deduplicate_works(records: List[Dict]) -> pd.DataFrame:
-    """
-    Deduplicate by 'id' and keep minimal fields for aggregation.
-    """
     df = pd.DataFrame.from_records(records)
     if "id" in df.columns:
         df = df.drop_duplicates(subset=["id"])
-    # Keep only what we need for time series
     keep_cols = [
         c for c in [
             "id",
             "title",
             "publication_year",
-            "publication_date",   # <-- keep full date!
+            "publication_date",
             "cited_by_count",
         ]
         if c in df.columns
@@ -310,23 +238,15 @@ def deduplicate_works(records: List[Dict]) -> pd.DataFrame:
 
 
 def sample_titles_for_annotation(df: pd.DataFrame, keyword: str, n: int = 10) -> pd.DataFrame:
-    """
-    Sample up to n titles for a given keyword for use in Label Studio.
-
-    Returns a small DataFrame with columns:
-        id, keyword, title, publication_year
-    """
     if "title" not in df.columns:
         return pd.DataFrame()
 
-    # Drop rows without titles
     df = df.dropna(subset=["title"])
     if df.empty:
         return pd.DataFrame()
 
     sample = df.sample(min(n, len(df)), random_state=42).copy()
     sample["keyword"] = canonical_term(keyword)
-    # Keep only the fields we care about for annotation
     keep_cols = [c for c in ["id", "keyword", "title", "publication_year"] if c in sample.columns]
     return sample[keep_cols]
 
@@ -342,24 +262,17 @@ def aggregate_yearly_counts(df: pd.DataFrame, keyword: str) -> pd.DataFrame:
           .reset_index()
     )
     ts["keyword"] = canonical_term(keyword)
-    # Fill missing years with 0 (complete series)
     full = pd.DataFrame({"publication_year": range(YEAR_START, YEAR_END + 1)})
     ts = full.merge(ts, on="publication_year", how="left").fillna({"count": 0})
     ts["count"] = ts["count"].astype(int)
     return ts[["keyword", "publication_year", "count"]]
 
 def aggregate_monthly_counts(df: pd.DataFrame, keyword: str) -> pd.DataFrame:
-    """
-    Aggregate OpenAlex works to monthly counts for a keyword.
-    Output: keyword, month (timestamp at month start), count
-    """
     df = df.copy()
 
-    # Use publication_date if available; otherwise fall back to year
     if "publication_date" in df.columns and df["publication_date"].notna().any():
         df["pub_date"] = pd.to_datetime(df["publication_date"], errors="coerce")
     else:
-        # fallback: use June 1st of publication_year as an approximate date
         df["pub_date"] = pd.to_datetime(
             df["publication_year"].astype(str) + "-06-01",
             errors="coerce",
@@ -367,9 +280,7 @@ def aggregate_monthly_counts(df: pd.DataFrame, keyword: str) -> pd.DataFrame:
 
     df = df.dropna(subset=["pub_date"])
 
-    # Get month start for each record
-    df["month"] = df["pub_date"].dt.to_period("M").dt.to_timestamp("M")  # month end
-    # If you prefer month start, use: .dt.to_timestamp("MS")
+    df["month"] = df["pub_date"].dt.to_period("M").dt.to_timestamp("M")
 
     ts = (
         df.groupby("month")
@@ -379,11 +290,10 @@ def aggregate_monthly_counts(df: pd.DataFrame, keyword: str) -> pd.DataFrame:
     )
     ts["keyword"] = canonical_term(keyword)
 
-    # Build a complete monthly index from YEAR_START to YEAR_END
     full_months = pd.date_range(
         start=f"{YEAR_START}-01-01",
         end=f"{YEAR_END}-12-31",
-        freq="M",  # month end; use "MS" for month start
+        freq="M",
     )
     full = pd.DataFrame({"month": full_months})
     ts = full.merge(ts, on="month", how="left").fillna({"count": 0})
@@ -413,11 +323,6 @@ def save_monthly_timeseries(ts: pd.DataFrame, keyword: str) -> pathlib.Path:
     return out
 
 
-
-# =========================
-# Orchestration
-# =========================
-
 def run_pipeline(
     keywords: List[str] = KEYWORDS,
     year_start: int = YEAR_START,
@@ -430,39 +335,31 @@ def run_pipeline(
     for kw in keywords:
         raw_path = fetch_keyword(client, kw, year_start, year_end, max_records=10000)
 
-        # Process
         records = load_jsonl(raw_path)
         df = deduplicate_works(records)
         proc_path = PROCESSED_DIR / f"{canonical_term(kw).replace(' ', '_')}.parquet"
         df.to_parquet(proc_path, index=False)
         print(f"[{kw}] processed -> {proc_path}")
 
-        # Sample titles for annotation
         anno_df = sample_titles_for_annotation(df, kw, n=10)
         if not anno_df.empty:
             all_annotation_samples.append(anno_df)
 
-        # Aggregate yearly counts
         ts = aggregate_yearly_counts(df, kw)
-        # Normalize counts
         ts = normalize_timeseries(ts)
         save_timeseries(ts, kw)
         all_ts.append(ts)
 
-        # ----- NEW: monthly aggregation -----
         ts_month = aggregate_monthly_counts(df, kw)
         save_monthly_timeseries(ts_month, kw)
 
-    # Combined CSV for quick plotting later
     combined = pd.concat(all_ts, ignore_index=True)
     combined_path = TIMESERIES_DIR / "all_keywords_timeseries.csv"
     combined.to_csv(combined_path, index=False)
     print(f"[ALL] combined time series -> {combined_path}")
     
-    # Combined annotation file for Label Studio
     if all_annotation_samples:
         anno_all = pd.concat(all_annotation_samples, ignore_index=True)
-        # Label Studio likes a "text" field by default; rename title -> text
         anno_all = anno_all.rename(columns={"title": "text"})
         anno_out = ANNOTATION_DIR / "annotation_titles_labelstudio.csv"
         anno_out.parent.mkdir(parents=True, exist_ok=True)
@@ -470,6 +367,4 @@ def run_pipeline(
         print(f"[ALL] annotation titles -> {anno_out}")
 
 if __name__ == "__main__":
-    # Minimal smoke test: run end-to-end for the default KEYWORDS
-    # TODO: add argparse to pass custom keywords or years from CLI.
     run_pipeline()

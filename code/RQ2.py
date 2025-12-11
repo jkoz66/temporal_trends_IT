@@ -4,26 +4,15 @@ from matplotlib.lines import Line2D
 from pathlib import Path
 
 
-# =========================
-# CONFIG
-# =========================
-
-# Main input file
 CSV_PATH = Path("data/buzzword_timeseries_master.csv")
 
-# Whether to also make separate plots for wiki_norm and gtrends_norm
 MAKE_WIKI_PLOTS = True
 MAKE_GTRENDS_PLOTS = True
 
-
-# =========================
 # Data loading & preparation
-# =========================
-
 def load_and_prepare_data(csv_path: Path) -> pd.DataFrame:
     df = pd.read_csv(csv_path).copy()
 
-    # --- unify YEAR column ---
     if "year" in df.columns:
         df["year"] = pd.to_numeric(df["year"], errors="coerce")
     elif "publication_year" in df.columns:
@@ -34,7 +23,6 @@ def load_and_prepare_data(csv_path: Path) -> pd.DataFrame:
             f"Columns present: {df.columns.tolist()}"
         )
 
-    # --- make sure the key RQ2 columns exist ---
     required_cols = ["keyword", "year", "academic_norm", "public_norm"]
     missing = [c for c in required_cols if c not in df.columns]
     if missing:
@@ -43,25 +31,18 @@ def load_and_prepare_data(csv_path: Path) -> pd.DataFrame:
             f"Available columns: {df.columns.tolist()}"
         )
 
-    # coerce to numeric
     df["academic_norm"] = pd.to_numeric(df["academic_norm"], errors="coerce")
     df["public_norm"] = pd.to_numeric(df["public_norm"], errors="coerce")
 
-    # optional components
     if "wiki_norm" in df.columns:
         df["wiki_norm"] = pd.to_numeric(df["wiki_norm"], errors="coerce")
     if "gtrends_norm" in df.columns:
         df["gtrends_norm"] = pd.to_numeric(df["gtrends_norm"], errors="coerce")
 
-    # Drop rows with missing key values
     df = df.dropna(subset=["year", "keyword", "academic_norm", "public_norm"])
 
     return df
 
-
-# =========================
-# Generic helpers
-# =========================
 
 def scatter_grid(df: pd.DataFrame, x_col: str, y_col: str,
                  x_label: str, y_label: str,
@@ -70,11 +51,9 @@ def scatter_grid(df: pd.DataFrame, x_col: str, y_col: str,
     keywords = sorted(df_sorted["keyword"].unique())
     n_keywords = len(keywords)
 
-    # Use 2 columns so each subplot is wider and easier to read in the PDF
     n_cols = 2
     n_rows = (n_keywords + n_cols - 1) // n_cols
 
-    # Larger figure size so details survive ACM column scaling
     fig, axes = plt.subplots(
         n_rows, n_cols,
         figsize=(6 * n_cols, 3 * n_rows),
@@ -91,7 +70,7 @@ def scatter_grid(df: pd.DataFrame, x_col: str, y_col: str,
             sub[y_col],
             alpha=0.7,
             edgecolor="none",
-            s=25,  # bigger points so they are visible after shrinking in LaTeX
+            s=25,
         )
         ax.set_title(keyword, fontsize=10)
         ax.set_xlabel(x_label, fontsize=9)
@@ -101,7 +80,6 @@ def scatter_grid(df: pd.DataFrame, x_col: str, y_col: str,
         ax.set_ylim(-0.05, 1.05)
         ax.set_xlim(-0.05, 1.05)
 
-    # Hide unused axes (for example if n_keywords is odd)
     for ax in axes[n_keywords:]:
         ax.set_visible(False)
 
@@ -127,23 +105,18 @@ def scatter_grid(df: pd.DataFrame, x_col: str, y_col: str,
 def dual_axis_grid(df: pd.DataFrame, left_col: str, right_col: str,
                    left_label: str, right_label: str,
                    title: str, out_path: Path) -> None:
-    """
-    Create a grid of dual-axis time-series plots (one per keyword),
-    laid out similarly to the scatter_grid (2 columns, many rows)
-    so that each panel is wide enough to be readable in the PDF.
-    """
+
     df_sorted = df.sort_values(["keyword", "year"])
     keywords = sorted(df_sorted["keyword"].unique())
     n_keywords = len(keywords)
 
-    # Match layout style to scatter_grid: 2 columns, more rows
     n_cols = 2
     n_rows = (n_keywords + n_cols - 1) // n_cols
 
     fig, axes = plt.subplots(
         n_rows, n_cols,
         figsize=(10, 12),
-    )  # Fixed size
+    )
     axes = axes.flatten()
 
     for ax, keyword in zip(axes, keywords):
@@ -177,7 +150,6 @@ def dual_axis_grid(df: pd.DataFrame, left_col: str, right_col: str,
 
         ax2.set_ylim(-0.05, 1.05)
 
-    # Hide unused axes if n_keywords is odd
     for ax in axes[n_keywords:]:
         ax.set_visible(False)
 
@@ -239,10 +211,6 @@ def correlation_bar(df: pd.DataFrame, y_col: str,
     print(corr_df.to_string(index=False, float_format=lambda x: f"{x:0.3f}"))
 
 
-# =========================
-# Main
-# =========================
-
 def main():
     if not CSV_PATH.exists():
         raise FileNotFoundError(f"CSV file not found: {CSV_PATH}")
@@ -250,7 +218,6 @@ def main():
     print(f"Loading data from: {CSV_PATH}")
     df = load_and_prepare_data(CSV_PATH)
 
-    # ---------- MAIN RQ2: academic_norm vs public_norm ----------
     scatter_grid(
         df,
         x_col="academic_norm",
@@ -278,7 +245,6 @@ def main():
         out_path=Path("figures/RQ2_corr_academic_vs_public.png"),
     )
 
-    # ---------- OPTIONAL: academic vs wiki_norm ----------
     if MAKE_WIKI_PLOTS and "wiki_norm" in df.columns:
         scatter_grid(
             df,
@@ -307,7 +273,6 @@ def main():
             out_path=Path("figures/RQ2_corr_academic_vs_wiki.png"),
         )
 
-    # ---------- OPTIONAL: academic vs gtrends_norm ----------
     if MAKE_GTRENDS_PLOTS and "gtrends_norm" in df.columns:
         scatter_grid(
             df,
@@ -335,7 +300,6 @@ def main():
             title="RQ2 (component): Correlation between academic and Google Trends interest",
             out_path=Path("figures/RQ2_corr_academic_vs_gtrends.png"),
         )
-
 
 if __name__ == "__main__":
     main()
