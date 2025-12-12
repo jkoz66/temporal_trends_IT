@@ -2,21 +2,22 @@ from pytrends.request import TrendReq
 import pandas as pd
 import time
 
-# --- configure here ---
+
 KEYWORDS = [
-    "Big data",
-    "Quantum computing",
-    "Artificial General Intelligence",
-    "Blockchain",
-    "Cryptocurrency",
-    "Metaverse",
-    "Edge computing",
-    "Generative AI",
-    "Chatbot",
-    "Augmented reality"
+    "big data",
+    "quantum computing",
+    "artificial general intelligence",
+    "blockchain",
+    "cryptocurrency",
+    "metaverse",
+    "edge computing",
+    "generative ai",
+    "chatbot",
+    "augmented reality"
 ]
-ANCHOR = "Blockchain"  # Common reference keyword across all batches
-TIMEFRAME = "2015-01-01 2024-12-31"
+# static anchor
+ANCHOR = "blockchain"
+TIMEFRAME = "2015-01-01 2025-12-09"
 GEO = ""
 GPROP = ""
 
@@ -43,26 +44,27 @@ def fetch_trends_with_anchor(keywords, anchor, timeframe, geo="", gprop="", batc
     return all_batches
 
 
-def _median_positive(s):
+def _mean_positive(s):
     s = pd.to_numeric(s, errors="coerce")
     pos = s[s > 0]
     return pos.mean() if not pos.empty else None
 
+
 def normalize_and_merge_batches(batches, anchor):
     """
     Scale all batches to the first batch using the anchor column.
-    For batch k>1: scale = median(anchor_base) / median(anchor_k),
+    For batch k>1: scale = mean(anchor_base) / mean(anchor_k),
     then multiply all non-anchor columns in batch k by 'scale'.
     """
     if not batches:
         return None
 
     base = batches[0].copy()
-    # basic sanity
+    
     if anchor not in base.columns:
         raise ValueError("Anchor not found in first batch; cannot normalize.")
 
-    base_anchor_med = _median_positive(base[anchor])
+    base_anchor_med = _mean_positive(base[anchor])
     if base_anchor_med in (None, 0):
         raise ValueError("Anchor series in base batch has no positive values; pick a stronger anchor.")
 
@@ -70,12 +72,12 @@ def normalize_and_merge_batches(batches, anchor):
 
     for b in batches[1:]:
         if anchor not in b.columns:
-            # nothing to scale against; skip scaling but still merge
+            # skip scaling
             scaled = b.copy()
         else:
-            batch_anchor_med = _median_positive(b[anchor])
+            batch_anchor_med = _mean_positive(b[anchor])
             if batch_anchor_med in (None, 0):
-                # unable to compute a robust scale; skip scaling for this batch
+                # skip scaling for this batch
                 scaled = b.copy()
             else:
                 scale = float(base_anchor_med) / float(batch_anchor_med)
@@ -84,11 +86,11 @@ def normalize_and_merge_batches(batches, anchor):
                     if c not in ("date", "isPartial", "__batch_id__", anchor):
                         scaled[c] = pd.to_numeric(scaled[c], errors="coerce").astype(float) * scale
 
-        # drop duplicate anchor before merging (after scaling!)
+        # drop duplicate anchor before merging
         scaled = scaled.drop(columns=[anchor], errors="ignore")
         merged = merged.merge(scaled, on=["date"], how="outer")
 
-    # final cleanup
+    # cleanup
     merged = merged.drop(columns=["isPartial"], errors="ignore")
     return merged.sort_values("date")
 
@@ -101,18 +103,18 @@ def main():
 
     result = normalize_and_merge_batches(batches, anchor=ANCHOR)
 
-    out_csv = "data_trends1.csv"
+    out_csv = "../data/data_trends/data_trends.csv"
     result.to_csv(out_csv, index=False)
     print(f"\nSaved: {out_csv}")
     print(result.head())
 
-    # Yearly aggregation (safe even if some columns missing in certain weeks)
+    # yearly aggregation
     result["year"] = pd.to_datetime(result["date"]).dt.year
 
-    # Keep only tracked keywords (avoid anchor & helper cols)
+    # keep only tracked keywords
     cols = [c for c in KEYWORDS if c in result.columns]
     yearly = result.groupby("year")[cols].mean().round(2).reset_index()
-    yearly_out = "data_trends_yearly1.csv"
+    yearly_out = "../data/data_trends/data_trends_yearly.csv"
     yearly.to_csv(yearly_out, index=False)
     print(f"Saved: {yearly_out}")
     print(yearly.head())
