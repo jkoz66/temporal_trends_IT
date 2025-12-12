@@ -7,25 +7,7 @@ The instructions below explain how to fully reproduce the results after cloning 
 
 ---
 
-## 📦 1. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-If no `requirements.txt` is provided, install manually:
-
-```
-pandas
-matplotlib
-seaborn
-requests
-tqdm
-```
-
----
-
-## 📂 2. Repository Structure
+##  2. Repository Structure
 
 ```
 code/
@@ -46,13 +28,11 @@ data/
     Annotation_results.csv           → Final hype annotations
 
 figures/                             → All generated figures
-
-README.md                            → This file
 ```
 
 ---
 
-## 🛰 3. Collect Raw Data (Optional)
+##  Collect Raw Data
 
 If you want to re-download all raw data:
 
@@ -73,7 +53,7 @@ python code/wikipedia.py
 
 ---
 
-## 🔄 4. Build Master Time Series Dataset
+##  Build Master Time Series Dataset
 
 ```bash
 python code/merge_buzzword_timeseries.py
@@ -86,7 +66,7 @@ data/buzzword_timeseries_master.csv
 
 ---
 
-## 📊 5. Reproduce RQ1 Plots
+##  Reproduce RQ1 Plots
 
 ```bash
 python code/RQ1.py
@@ -99,7 +79,7 @@ figures/RQ1_hypecycles_smallmultiples.png
 
 ---
 
-## 📈 6. Reproduce RQ2 Plots
+##  Reproduce RQ2 Plots
 
 ```bash
 python code/RQ2.py
@@ -114,7 +94,7 @@ figures/RQ2_corr_academic_vs_public.png
 
 ---
 
-## 🧠 7. Reproduce RQ3 Plots
+##  Reproduce RQ3 Plots
 
 ```bash
 python code/merge_hype_with_context.py
@@ -130,21 +110,8 @@ figures/hype_score_distribution.png
 
 ---
 
-## ✅ 8. All Figures
+##  8. All Figures
 
 After running steps **4–7**, the `figures/` directory will contain **all plots used in the report**.
 
 ---
-
-## 📄 9. Citation
-
-If you use this code in academic work, please cite the project or link to this repository.
-
----
-
-## 🙌 10. Contributors
-
-Jakub Kozanyi  
-Ondrej Kozanyi  
-Piotr Tomasz Grabowski  
-Hana Dubovska
