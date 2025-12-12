@@ -103,7 +103,7 @@ def main():
 
     result = normalize_and_merge_batches(batches, anchor=ANCHOR)
 
-    out_csv = "../data/data_trends/data_trends.csv"
+    out_csv = "./data/data_trends/data_trends.csv"
     result.to_csv(out_csv, index=False)
     print(f"\nSaved: {out_csv}")
     print(result.head())
@@ -114,7 +114,7 @@ def main():
     # keep only tracked keywords
     cols = [c for c in KEYWORDS if c in result.columns]
     yearly = result.groupby("year")[cols].mean().round(2).reset_index()
-    yearly_out = "../data/data_trends/data_trends_yearly.csv"
+    yearly_out = "./data/data_trends/data_trends_yearly.csv"
     yearly.to_csv(yearly_out, index=False)
     print(f"Saved: {yearly_out}")
     print(yearly.head())

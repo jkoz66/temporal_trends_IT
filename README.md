@@ -45,6 +45,7 @@ python code/test_openalex.py
 ### **Google Trends**
 ```bash
 python code/google_trends_download_and_normalize.py
+python code/transform_GT_format.py
 ```
 
 ### **Wikipedia Pageviews**

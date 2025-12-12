@@ -4,8 +4,8 @@ import pandas as pd
 
 # this function reshapes the google trends data to uniformly process data from other sources
 def reshape_monthly(
-    in_path="../data/data_trends/data_trends.csv",
-    out_path="../data/data_trends/data_trends_monthly_long.csv",
+    in_path="./data/data_trends/data_trends.csv",
+    out_path="./data/data_trends/data_trends_monthly_long.csv",
 ):
     df = pd.read_csv(in_path)
 
@@ -49,8 +49,8 @@ def reshape_monthly(
 # ---------- YEARLY ----------
 
 def reshape_yearly(
-    in_path="../data/data_trends/data_trends_yearly.csv",
-    out_path="../data/data_trends/data_trends_yearly_long.csv",
+    in_path="./data/data_trends/data_trends_yearly.csv",
+    out_path="./data/data_trends/data_trends_yearly_long.csv",
 ):
     df = pd.read_csv(in_path)
 
