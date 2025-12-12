@@ -13,22 +13,24 @@ The instructions below explain how to fully reproduce the results after cloning 
 code/
     RQ1.py                                  → Generates RQ1 plots
     RQ2.py                                  → Generates RQ2 plots
-    merge_hype_with_context.py              → Generates RQ3 plots
+    ann_viz_spear.py
+    & annotation_distribution_viz.py        → Generate RQ3 plots
     analyze_hype_annotations.py             → Annotation evaluation (agreement, distributions)
     merge_buzzword_timeseries.py            → Combines OpenAlex + Trends + Wikipedia
+    merge_hype_with_context.py              → Links hype scores to academic/public interest
     test_openalex.py                        → OpenAlex API collector
     google_trends_download_and_normalize.py → Google Trends collector
     wikipedia.py                            → Wikipedia pageview collector
     sample_annotations.py                   → Samples 100 random paper titles from OpenAlex dataset
     
 data/
-    data_openalex/                   → OpenAlex raw + processed + timeseries + annotation context
-    data_trends/                     → Google Trends monthly + yearly data
-    data_wiki/                       → Wikipedia monthly + yearly pageviews
-    buzzword_timeseries_master.csv   → Final dataset used for RQ1–RQ2
-    Annotation_results.csv           → Final hype annotations
+    data_openalex/                          → OpenAlex raw + processed + timeseries + annotation context
+    data_trends/                            → Google Trends monthly + yearly data
+    data_wiki/                              → Wikipedia monthly + yearly pageviews
+    buzzword_timeseries_master.csv          → Final dataset used for RQ1–RQ2
+    Annotation_results.csv                  → Final hype annotations
 
-figures/                             → All generated figures
+figures/                                    → All generated figures
 ```
 
 ---
@@ -100,14 +102,14 @@ figures/RQ2_corr_academic_vs_public.png
 
 ```bash
 python code/merge_hype_with_context.py
+python code/ann_viz_spear.py
 ```
 
 **Outputs:**
 ```
 data/data_openalex/annotation/hype_with_context.csv
-figures/hype_vs_academic_in_year.png
-figures/hype_vs_public_interest.png
-figures/hype_score_distribution.png
+figures/top10_spearman_hype_vs_academic.png
+figures/top10_spearman_hype_vs_public.png
 ```
 
 ---
